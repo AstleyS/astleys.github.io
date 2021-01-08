@@ -170,6 +170,7 @@ section {
     margin: var(--mb-4) 0;
     text-align: center;
     letter-spacing: var(--mb-1);
+    text-transform: uppercase;
 }
 
 
@@ -240,4 +241,23 @@ section {
     box-shadow: 0px 2px 8px 3px var(--primary-color);
 }
 
-/* ======  ====== */
+/* ====== SKILLS ====== */
+.skills-section {
+    background-color: lightsalmon;
+}
+/* ====== PORTFOLIO ====== */
+.portfolio-section {
+    background-color: linen;
+}
+/* ====== CONTACT ====== */
+.contact-section {
+    background-color: lightsteelblue;
+}
+/* ====== FOOTER ====== */
+.footer-section {
+    background-color: lightseagreen;
+}
+
+.footer-copy {
+    margin: var(--mb-1);       
+}
