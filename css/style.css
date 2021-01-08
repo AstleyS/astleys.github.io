@@ -1,0 +1,100 @@
+:root {
+    /* ====== COLORS ====== */
+    --gradient-colo-1: #ffecd2;
+    --gradient-colo-2: #fed6e3;
+    --portfolio-color: linear-gradient(to right top, var(--gradient-colo-1), var(--gradient-colo-2));
+
+    --primary-color: rgba(250, 126, 112, 0.4);
+    --text-color: rgb(116, 91, 91);
+
+    --container-color: #FFF;
+    
+    /* ====== FONT AND TYPOGRAPHY ====== */
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 2rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+
+
+    --header-height: 3rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--portfolio-color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ====== HEADER ====== */
+.nav {
+    height: var(--header-height);
+    width: 100%;
+    position: fixed;
+
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    
+    background-color: var(--portfolio-color);
+    box-shadow: 2px 2px 5px var(--primary-color);
+}
+
+.nav-links {
+    width: 50%;
+    
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: space-around;
+    justify-self: center;
+    align-items: center;
+
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.nav-item {
+    color: inherit;
+}
+
+.nav-item::after {
+    content: '';
+    width: 0;
+    height: 2px;
+
+    display: block;
+    
+    background: var(--text-color);
+    /* not working like i want */
+    transition: width 0.3;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+    transition: width 0.3;
+}
+
+
+.social-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* ======  ====== */
+/* ======  ====== */
+/* ======  ====== */
