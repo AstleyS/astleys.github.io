@@ -15,6 +15,11 @@
     --normal-font-size: .938rem;
     --small-font-size: .813rem;
 
+    /* ====== SPACING ====== */
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
 
     --header-height: 3rem;
 }
@@ -47,7 +52,10 @@ a {
     height: var(--header-height);
     width: 100%;
     position: fixed;
-
+    top: 0;
+    left: 0;
+    z-index: 1;
+    
     display: grid;
     grid-template-columns: 10% 1fr 10%;
     
@@ -70,6 +78,7 @@ a {
 
 .nav-item {
     color: inherit;
+    cursor: pointer;
 }
 
 .nav-item::after {
@@ -80,7 +89,7 @@ a {
     display: block;
     
     background: var(--text-color);
-    /* not working like i want */
+    /* not working like i want to */
     transition: width 0.3;
 }
 
@@ -89,12 +98,55 @@ a {
     transition: width 0.3;
 }
 
-
 .social-links {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-/* ======  ====== */
+
+.social-link .fab {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-link .fab:hover {
+    opacity: 1;
+}
+
+section {
+    height: calc(100vh - var(--header-height));
+}
+
+
+/* ====== HOME ====== */
+.home-container {
+    position: relative;
+    top: var(--header-height);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    background-color: lightblue;
+
+}
+
+.me-img {
+    width: 280px;
+    order: 1;
+    margin: var(--mb-3) 0;
+
+    border-radius: var(--mb-4) 0 var(--mb-4) 0;
+}
+
+.presentation {
+    position: relative;
+    right: 8rem;
+    justify-self: end;
+}
+
+
+
 /* ======  ====== */
 /* ======  ====== */
