@@ -1,8 +1,8 @@
 :root {
     /* ====== COLORS ====== */
-    --gradient-colo-1: #ffecd2;
-    --gradient-colo-2: #fed6e3;
-    --portfolio-color: linear-gradient(to right top, var(--gradient-colo-1), var(--gradient-colo-2));
+    --gradient-color-1: #ffecd2;
+    --gradient-color-2: #fed6e3;
+    --portfolio-color: linear-gradient(to right top, var(--gradient-color-1), var(--gradient-color-2));
 
     --primary-color: rgba(250, 126, 112, 0.4);
     --text-color: rgb(116, 91, 91);
@@ -36,7 +36,7 @@ html {
 }
 
 body {
-    background-color: var(--portfolio-color);
+    background-color: var(--gradient-color-1);
 }
 
 ul {
@@ -114,30 +114,37 @@ a {
     opacity: 1;
 }
 
+
 section {
     height: calc(100vh - var(--header-height));
+    border: 1px solid black;
 }
 
-
 /* ====== HOME ====== */
-.home-container {
-    position: relative;
-    top: var(--header-height);
+.home-section {
+    height: calc(100vh - var(--header-height));
+    margin-top: var(--header-height);
+}
 
+.home-container {    
+    height: 100%;
+    
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
 
     background-color: lightblue;
-
 }
 
 .me-img {
-    width: 280px;
-    order: 1;
-    margin: var(--mb-3) 0;
-
+    width: 500px;
+    max-width: 80%;
+    position: relative;
+    
     border-radius: var(--mb-4) 0 var(--mb-4) 0;
+    object-fit: cover;
+    filter: brightness(80%);
+    order: 1;
 }
 
 .presentation {
@@ -146,7 +153,13 @@ section {
     justify-self: end;
 }
 
+/* ====== ABOUT ====== */
+.about-section {
+    background-color: lightpink;
+}
+
+.title {
+}
 
 
-/* ======  ====== */
 /* ======  ====== */
