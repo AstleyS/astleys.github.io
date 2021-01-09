@@ -108,7 +108,6 @@ a {
 
 .social-links img {
     width: 20px;
-    margin-left: 2px;
     opacity: 0.5;
     cursor: pointer;
 }
@@ -124,7 +123,6 @@ a {
 
 section {
     height: calc(100vh - var(--header-height));
-    border: 1px solid black;
 }
 
 
@@ -141,7 +139,6 @@ section {
     grid-template-columns: 1fr 1fr;
     align-items: center;
 
-    background-color: lightblue;
 }
 
 .me-img {
@@ -163,7 +160,7 @@ section {
 
 /* ====== ABOUT ====== */
 .about-section {
-    background-color: lightpink;
+  
 }
 
 .title {
@@ -243,19 +240,15 @@ section {
 
 /* ====== SKILLS ====== */
 .skills-section {
-    background-color: lightsalmon;
 }
 /* ====== PORTFOLIO ====== */
 .portfolio-section {
-    background-color: linen;
 }
 /* ====== CONTACT ====== */
 .contact-section {
-    background-color: lightsteelblue;
 }
 /* ====== FOOTER ====== */
 .footer-section {
-    background-color: lightseagreen;
 }
 
 .footer-copy {
