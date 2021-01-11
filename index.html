@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Astley's Digital Portfolio</title>
     <script>
-        alert("Website in maintenance. Sorry for the trouble :(\nFor great results, please return later.");
+        // alert("Website in maintenance. Sorry for the trouble :(\nFor greater results, please return later.");
     </script>
 </head>
 <body>
@@ -22,10 +22,10 @@
         <nav class="nav">
 
             <ul class="nav-links">
-                <li><a href="#" class="nav-item">Home</a></li>
-                <li><a href="#" class="nav-item">About</a></li>
-                <li><a href="#" class="nav-item">Portfolio</a></li>
-                <li><a href="#" class="nav-item">Contact me!</a></li>
+                <li><a href="#home" class="nav-item">Home</a></li>
+                <li><a href="#about" class="nav-item">About</a></li>
+                <li><a href="#portfolio" class="nav-item">Portfolio</a></li>
+                <li><a href="#contact" class="nav-item">Contact me!</a></li>
             </ul>
 
             <div class="social-links">
@@ -108,12 +108,12 @@
                         </div>
                     </div>
                 </div>
-            
+                <p class="watch-resume">Want to check my <a href="doc/resume.pdf" target="_blank">resume</a>?</p>
             </div>
 
         </section>
 
-        <!-- ====== SKILLS ====== 
+        <!-- ====== SKILLS ======
         <section class="section skills-section" id="skills">
             <h3 class="title skills-title">Skills</h3>
             <div class="section-content">
@@ -123,7 +123,7 @@
             </div>
         </section>
         -->
-
+        
         <!-- ====== PORTFOLIO ====== 
         <section class="section portfolio-section" id="portfolio">
             <h3 class="title portfolio-title">Portfolio</h3>
@@ -134,17 +134,37 @@
             </div>
         </section>
         -->
+    
         
-        <!-- ====== CONTACT ====== 
+        <!-- ====== CONTACT ====== -->
         <section class="section contact-section" id="contact">
-            <h3 class="title contact-title">Contact</h3>
-            <div class="section-content">
-                <p class="contact">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic quisquam temporibus facere! Ut doloremque, quo autem dolorum eveniet, dolorem consequatur facere, quas rerum corrupti illum aut corporis et numquam porro?
-                </p>
+            <h3 class="title contact-title">Contact Me</h3>
+            <h4 class="contact-subtitle">Any Questions? I will be overjoyed to answer it?</h4>
+            <div class="section-content contact-content">
+                <form class="form-email" action="" method="get">
+                    
+                    <div class="contact-data">
+                        <!-- NAME -->
+                        <label for="name">Name</label>
+                        <input id="name" type="text" placeholder="Your name..." >
+                        <!-- EMAIL -->
+                        <label for="email">Email</label>
+                        <input id="email" type="email" placeholder="Your email..." >
+                    </div>
+
+                    <div class="contact-message">
+                        <!-- SUBJECT -->
+                        <label for="subject">Subject</label>
+                        <input id="subject" type="text" placeholder="Your subject..." >
+                        <!-- MESSAGE -->
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="10" cols="30" placeholder="Your message..."  maxlength="500"></textarea>
+                        <button class="send-email" type="submit">Send email</button>
+                    </div>
+
+                </form>
             </div>
         </section>
-        -->
         
         <!-- ====== FOOTER ====== -->
         <footer class="footer-section" id="footer">
