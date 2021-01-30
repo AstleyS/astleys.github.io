@@ -46,6 +46,14 @@ ul {
 a {
     text-decoration: none;
 }
+section {
+    height: calc(100vh - var(--header-height));
+}
+
+/* 
+.section {
+    position: relative;
+} */
 
 /* ====== HEADER ====== */
 .nav {
@@ -57,7 +65,7 @@ a {
     z-index: 1;
     
     display: grid;
-    grid-template-columns: 10% 1fr 12%;
+    grid-template-columns: 1fr 15%;
     
     background-color: var(--gradient-color-1);
     box-shadow: 0px 2px 6px var(--primary-color);
@@ -65,9 +73,9 @@ a {
 }
 
 .nav-links {
-    width: 50%;
-    
-    grid-column: 2 / 3;
+    width: 60%;
+    margin-left: 10%;
+
     display: flex;
     justify-content: space-around;
     justify-self: center;
@@ -91,20 +99,22 @@ a {
     
     background: var(--text-color);
     /* not working like i want to */
-    transition: width 0.3;
+    transition: 0.3;
 }
 
 .nav-item:hover::after {
     width: 100%;
-    transition: width 0.3;
+    transition: 0.3;
 }
 
 .social-links {
+    width: 100%;
+
     display: flex;
     justify-content: space-around;
+    justify-self: center;
     align-items: center;
-
-    order: 3;
+    visibility: visible;
 }
 
 .social-links img {
@@ -113,26 +123,30 @@ a {
     cursor: pointer;
     transition: 0.3s;
 }
+
 .social-links img:hover {
     width: 24px;
     opacity: 1;
 }
 
-.social-link .fab:hover {
-    opacity: 1;
+/* 
+    For screens with width smaller than 660px
+ */
+@media screen and (max-width: 660px) {
+     .nav-links {
+        width: 100%;
+    }
+
+    .social-links img {
+        visibility: hidden;
+    }
 }
 
-section {
-    height: calc(100vh - var(--header-height));
-}
 
-.section {
-    position: relative;
-}
+/* ====== END HEADER ====== */
 
 /* ====== HOME ====== */
 .home-section {
-    height: calc(100vh - var(--header-height));
     margin-top: var(--header-height);
 }
 
@@ -142,14 +156,15 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-
 }
 
 .me-img {
-    width: 500px;
-    max-width: 80%;
-    position: relative;
+    min-width: 225px;
+    max-width: 75%; /* => 400px */
+    min-height: 340px;
+    max-height: 80%; /* => 533px */
     
+    justify-self: start;
     border-radius: var(--mb-4) 0 var(--mb-4) 0;
     object-fit: cover;
     filter: brightness(80%);
@@ -157,10 +172,48 @@ section {
 }
 
 .presentation {
-    position: relative;
-    right: 8rem;
-    justify-self: end;
+    align-self: center;
+    justify-self: center;
+    margin-left: 10%;
 }
+
+/* 
+    For screens with width smaller than 475px
+ */
+ @media screen and (max-width: 475px) {
+    .home-container {    
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        gap: var(--mb-3);
+    }
+
+    .me-img {
+        margin-top: var(--mb-3);
+        min-width: 165px;
+        max-width: 45%;
+        min-height: 210px;
+        max-height: 90%;
+    
+        grid-row: 1 / 2;
+        justify-self: center;
+        align-self: flex-end;
+
+        border-radius: 30%;
+    }
+
+    .presentation {
+        margin-left: 0%;
+        
+        align-self: flex-start;
+        justify-self: center;
+
+        text-align: center;
+
+    }
+}
+
+@media screen and (max-width: 359px) {
+ 
 
 /* ====== ABOUT ====== */
 
