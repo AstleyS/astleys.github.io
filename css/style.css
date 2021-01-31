@@ -48,7 +48,7 @@ a {
 }
 
 section {
-    height: calc(100vh - var(--header-height));
+    height: 100vh;
 }
 
 /* 
@@ -153,6 +153,7 @@ section {
     cursor: pointer;
 }
 
+/* The active link is the indicator on which link the user is on */
 .active-link {
     position: relative;
 }
@@ -170,15 +171,15 @@ section {
     border-radius: 50%;
 }
 
+/* The show-menu manipulates the nav property when the user clicks on view menu (mobile) */
 .show-menu {
-    height: calc(100vh - var(--header-height));
-    margin-top: var(--header-height);
-    
+    height: 100%;
     opacity: 1;
     box-shadow: none;
     transition: 0.45s linear;
 }
 
+/* The show-menu-links manipulates the nav links property when the user clicks on view menu (mobile) */
 .show-menu-links {
     height: 85%;
 
@@ -220,8 +221,6 @@ section {
     }
     
 }
-
-
 /* ====== END HEADER ====== */
 
 /* ====== HOME ====== */
@@ -290,22 +289,12 @@ section {
 
     }
 } 
-
 /* ====== ABOUT ====== */
 
 .title {
-    margin: var(--mb-4) 0;
     text-align: center;
     letter-spacing: var(--mb-1);
     text-transform: uppercase;
-}
-
-.about-section {
-    position: relative;
-}
-
-.about-section .title {
-    margin-bottom: 0;
 }
 
 .title::before {
@@ -325,7 +314,7 @@ section {
 }
 
 .availability-status {
-    margin-bottom: 2rem;
+    margin: 0.25rem 0 var(--mb-2);
     text-align: center;
     text-decoration: underline overline wavy;
     color: rgb(107, 153, 107);
@@ -347,10 +336,10 @@ section {
 }
 
 .hobbies-title {
-    margin: var(--mb-2) 0 2rem 0;
+    margin-bottom: var(--mb-2);
     text-align: center;
     text-decoration: dotted;
-    letter-spacing: 1.2px;
+    word-spacing: 0.125rem;
 }
 
 .hobbies {
@@ -372,12 +361,8 @@ section {
 }
 
 .watch-resume {
-    position: absolute;
+    margin-top: var(--mb-4);
     text-align: center;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    bottom: 0;
-
 }
 
 /* ====== SKILLS ====== */
