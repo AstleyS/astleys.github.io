@@ -51,6 +51,19 @@ section {
     height: 100vh;
 }
 
+.section {
+    padding-top: calc(var(--header-height) + var(--mb-2));
+}
+
+.section-content {
+    width: 80%;
+    margin: 0 auto;
+
+    text-align: justify;
+    word-spacing: 0.125rem;
+    line-height: 2.3rem;
+}
+
 /* 
 .section {
     position: relative;
@@ -189,38 +202,6 @@ section {
     grid-column: 1/2;
     align-items: center;
 }
-
-/* 
-    For screens with width smaller than 660px
- */
-@media screen and (max-width: 660px) {
-     .nav-links {
-        width: 100%;
-    }
-
-    .social-links img {
-        display: none;
-    }
-}
-
-/* 
-    For screens with width smaller than 360px
- */
-@media screen and (max-width: 360px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .headline{
-        display: block;
-    }
-
-    .burger {
-        display: block; 
-
-    }
-    
-}
 /* ====== END HEADER ====== */
 
 /* ====== HOME ====== */
@@ -238,9 +219,9 @@ section {
 
 .me-img {
     min-width: 225px;
-    max-width: 75%; /* => 400px */
+    max-width: 75%;
     min-height: 340px;
-    max-height: 80%; /* => 533px */
+    max-height: 75%;
     
     justify-self: start;
     border-radius: var(--mb-4) 0 var(--mb-4) 0;
@@ -255,40 +236,6 @@ section {
     margin-left: 10%;
 }
 
-/* 
-    For screens with width smaller than 475px
- */
- @media screen and (max-width: 475px) {
-    .home-container {    
-        grid-template-columns: none;
-        grid-template-rows: 1fr 1fr;
-        gap: var(--mb-3);
-    }
-
-    .me-img {
-        margin-top: var(--mb-3);
-        min-width: 165px;
-        max-width: 45%;
-        min-height: 210px;
-        max-height: 90%;
-    
-        grid-row: 1 / 2;
-        justify-self: center;
-        align-self: flex-end;
-
-        border-radius: 30%;
-    }
-
-    .presentation {
-        margin-left: 0%;
-        
-        align-self: flex-start;
-        justify-self: center;
-
-        text-align: center;
-
-    }
-} 
 /* ====== ABOUT ====== */
 
 .title {
@@ -320,15 +267,6 @@ section {
     color: rgb(107, 153, 107);
 }
 
-.section-content {
-    width: 80%;
-    margin: 0 auto;
-
-    text-align: justify;
-    word-spacing: 0.125rem;
-    line-height: 2.3rem;
-}
-
 .about .job-positions {
     text-decoration: underline;
     font-weight: bold;
@@ -343,8 +281,9 @@ section {
 }
 
 .hobbies {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(4, 20%);
 }
 
 .hobbie-item {
@@ -432,4 +371,91 @@ textarea:focus::placeholder {
 /* ====== FOOTER ====== */
 .footer-copy {
     margin: var(--mb-1);       
+}
+/* ====== END FOOTER ====== */
+
+/* ====== MEDIA QUERIES ====== */
+/* 
+    For screens with width smaller than 660px
+ */
+ @media screen and (max-width: 660px) {
+    .nav-links {
+       width: 100%;
+   }
+
+   .social-links img {
+       display: none;
+   }
+
+   .about-section {
+       margin-top: var(--mb-2);
+   }
+
+   .section-content {
+       width: 90%;
+   }
+}
+
+/* 
+    For screens with width smaller than 475px
+ */
+ @media screen and (max-width: 475px) {
+     section {
+         height: auto;
+     }
+    .home-container {    
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        gap: var(--mb-3);
+    }
+
+    .me-img {
+        margin-top: var(--mb-3);
+        min-width: 165px;
+        max-width: 45%;
+        min-height: 210px;
+        max-height: 90%;
+    
+        grid-row: 1 / 2;
+        justify-self: center;
+        align-self: flex-end;
+
+        border-radius: 30%;
+    }
+
+    .presentation {
+        margin-left: 0%;
+        
+        align-self: flex-start;
+        justify-self: center;
+
+        text-align: center;
+    }
+
+    .section-content {
+        width: 95%;
+    }
+
+    .hobbies {
+        justify-content: space-evenly;
+        grid-template-columns: repeat(2, 45%);
+        gap: var(--mb-1);
+     }
+} 
+
+/* 
+   For screens with width smaller than 360px
+*/
+@media screen and (max-width: 380px) {
+   .nav-links {
+       display: none;
+   }
+   
+   .headline{
+       display: block;
+   }
+
+   .burger {
+       display: block; 
+   }
 }
