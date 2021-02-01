@@ -231,9 +231,10 @@ section {
 }
 
 .presentation {
+    margin-left: 10%;
+ 
     align-self: center;
     justify-self: center;
-    margin-left: 10%;
 }
 
 /* ====== ABOUT ====== */
@@ -262,6 +263,7 @@ section {
 
 .availability-status {
     margin: 0.25rem 0 var(--mb-2);
+    
     text-align: center;
     text-decoration: underline overline wavy;
     color: rgb(107, 153, 107);
@@ -275,6 +277,7 @@ section {
 
 .hobbies-title {
     margin-bottom: var(--mb-2);
+    
     text-align: center;
     text-decoration: dotted;
     word-spacing: 0.125rem;
@@ -301,6 +304,7 @@ section {
 
 .watch-resume {
     margin-top: var(--mb-4);
+    
     text-align: center;
 }
 
@@ -309,16 +313,28 @@ section {
 /* ====== PORTFOLIO ====== */
 
 /* ====== CONTACT ====== */
+.contact-section .section-content {
+    width: 70%;
+    height: 90%;
+    margin: 0 auto;
+
+    text-align: justify;
+    word-spacing: 0.125rem;
+    line-height: 2.3rem;
+}
+
 .contact-content {
-    padding: var(--mb-2) var(--mb-2);
- 
+    margin-top: var(--mb-2);
+    padding: 0 var(--mb-2);
+
     box-shadow: 0px 2px 8px var(--primary-color);
     border-radius: var(--mb-1);
 }
 
-.form-email {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.contact-subtitle {
+    margin-bottom: var(--mb-1);
+
+    text-align: center;
 }
 
 label[for="message"] {
@@ -326,9 +342,9 @@ label[for="message"] {
 }
 
 input {
+    width: 100%;
     padding: var(--mb-1);
     margin-bottom: var(--mb-1);
-    width: 20rem;
 
     display: block;
     
@@ -337,8 +353,8 @@ input {
 
 input::placeholder {
     color: grey;
-    transition: color 0.3s ease;
     /* Not working as I wanted */
+    transition: color 0.3s ease;
 }
 
 input:focus::placeholder {
@@ -346,9 +362,15 @@ input:focus::placeholder {
     border: solid var(--gradient-color-2);
 }
 
+input[type="submit"]:hover {
+    background-color: lightblue;
+}
+
 textarea {
-    resize: none;
+    width: 100%;
     padding: var(--mb-1);
+
+    resize: none;
     transition: color 0.5s ease;
 }
 
@@ -360,15 +382,33 @@ textarea:focus::placeholder {
     color: transparent;
     border: solid var(--gradient-color-2);
 }
-
-.send-email {
-    padding: var(--mb-1);
-    
-    display: flex;
-    justify-content: end;
-}
+/* ====== END CONTACT ====== */
 
 /* ====== FOOTER ====== */
+/* .footer-section .social-links {
+    width: 20%;
+    height: 1rem;
+
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(4, 1fr);
+
+} */
+
+.footer-section .social-links img {
+    width: 20px;
+    
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-section .social-links img:hover {
+    width: 24px;
+    
+    opacity: 1;
+}
+
 .footer-copy {
     margin: var(--mb-1);       
 }
@@ -403,6 +443,7 @@ textarea:focus::placeholder {
      section {
          height: auto;
      }
+
     .home-container {    
         grid-template-columns: none;
         grid-template-rows: 1fr 1fr;
@@ -440,7 +481,11 @@ textarea:focus::placeholder {
         justify-content: space-evenly;
         grid-template-columns: repeat(2, 45%);
         gap: var(--mb-1);
-     }
+    }
+
+    .footer-section .social-links {
+        display: block;
+    }
 } 
 
 /* 

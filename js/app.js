@@ -35,3 +35,5 @@ const navItems = document.querySelectorAll('.nav-item');
 // If any item was clicked, then the menu will be removed
 navItems.forEach(item => item.addEventListener('click', hide_menu));
 /******* END HIDE MENU *******/
+
+/******* SCROLL SECTIONS ACTIVE LINK *******/

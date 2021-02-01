@@ -137,38 +137,51 @@
         -->
     
         
-        <!-- ====== CONTACT ====== 
+        <!-- ====== CONTACT ====== -->
         <section class="section contact-section" id="contact">
             <h3 class="title contact-title">Contact Me</h3>
-            <h4 class="contact-subtitle">Any Questions? I will be overjoyed to answer it?</h4>
             <div class="section-content contact-content">
-                <form class="form-email" action="" method="get">
+                <h4 class="contact-subtitle">Any Questions? I will be glad to answer it?</h4>
+                <form class="form-email" action="mailto:astley_394@hotmail.com" method="POST">
                     
-                    <div class="contact-data">
-                        <label for="name">Name</label>
-                        <input id="name" type="text" placeholder="Your name..." >
-                        <label for="email">Email</label>
-                        <input id="email" type="email" placeholder="Your email..." >
-                    </div>
+                    <label for="name">Name</label>
+                    <input id="name" type="text" maxlength="20" placeholder="Your name..." >
+                    <label for="email">Email</label>
+                    <input id="email" type="email" maxlength="20" placeholder="Your email..." >
 
-                    <div class="contact-message">
-                        <label for="subject">Subject</label>
-                        <input id="subject" type="text" placeholder="Your subject..." >
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="10" cols="30" placeholder="Your message..."  maxlength="500"></textarea>
-                        <button class="send-email" type="submit">Send email</button>
-                    </div>
+                    <label for="subject">Subject</label>
+                    <input id="subject" type="text" maxlength="20" placeholder="Your subject..." >
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="10" placeholder="Your message..."  maxlength="500"></textarea>
+                    
+                    <input type="submit" value="Send Email">
 
                 </form>
             </div>
         </section>
-    -->
-        
-        <!-- ====== FOOTER ======
+    
+        <!-- ====== FOOTER ====== -->
         <footer class="footer-section" id="footer">
+            <!--
+            <div class="social-links">
+                <h3 class="footer-title">Social:</h3>
+                <a href="https://github.com/AstleyS" target="_blank">
+                    <img src="img/github.svg" alt="my-github">
+                </a>
+                <a href="https://www.linkedin.com/in/astley-santos/" target="_blank">
+                    <img src="img/linkedin-logo.svg" alt="my-linkedin">
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=00351963679195">
+                    <img src="img/whatsapp-logo.svg" alt="my-whatsapp">
+                </a>
+                <a href="https://www.instagram.com/_asteezy_/" target="_blank">
+                    <img src="img/instagram-logo.svg" alt="my-instagram">
+                </a>
+            </div>
+            -->
             <p class="footer-copy">&#169; 2021 Astley Santos. All right reserved</p>
         </footer>
-        -->
+        
     </main>
 
     <script src="js/app.js"></script>
