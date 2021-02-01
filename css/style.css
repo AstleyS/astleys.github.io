@@ -316,7 +316,7 @@ section {
 .contact-section .section-content {
     width: 70%;
     height: 90%;
-    margin: 0 auto;
+    margin: var(--mb-2) auto 0;
 
     text-align: justify;
     word-spacing: 0.125rem;
@@ -410,7 +410,7 @@ textarea:focus::placeholder {
 }
 
 .footer-copy {
-    margin: var(--mb-1);       
+    margin: var(--mb-2) 0  var(--mb-2) var(--mb-1);       
 }
 /* ====== END FOOTER ====== */
 
