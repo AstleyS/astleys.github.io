@@ -275,7 +275,7 @@ section {
     text-transform: uppercase;
 }
 
-.hobbies-title {
+.skills-title {
     margin-bottom: var(--mb-2);
     
     text-align: center;
@@ -283,13 +283,13 @@ section {
     word-spacing: 0.125rem;
 }
 
-.hobbies {
+.skills {
     display: grid;
     justify-content: space-between;
-    grid-template-columns: repeat(4, 20%);
+    grid-template-columns: repeat(3, 30%);
 }
 
-.hobbie-item {
+.skill-level {
     padding: 1rem 1rem 2rem;
     
     text-align: center;
@@ -298,7 +298,7 @@ section {
     transition: 0.3s;
 }
 
-.hobbie-item:hover {
+.skill-level:hover {
     box-shadow: 0px 2px 8px 3px var(--primary-color);
 }
 
@@ -477,12 +477,12 @@ textarea:focus::placeholder {
         width: 95%;
     }
 
-    .hobbies {
+    .skills {
         justify-content: space-evenly;
         grid-template-columns: repeat(2, 45%);
         gap: var(--mb-1);
     }
-
+ 
     .footer-section .social-links {
         display: block;
     }
