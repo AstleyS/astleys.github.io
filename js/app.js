@@ -113,7 +113,6 @@ function filterProjects(event) {
         });
     }
 }
-
 /******* END ACTIVE FILTER *******/
 
 
