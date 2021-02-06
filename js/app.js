@@ -10,6 +10,10 @@ navItems.forEach(item => item.addEventListener('click', hide_menu));
 // active link
 window.addEventListener('scroll', activeLink);
 
+// This variable will contain all filters
+const filters = document.querySelectorAll('.filters');
+// If any item was clicked, then the we will apply the filter
+filters.forEach(filter => filter.addEventListener('click', filterProjects));
 
 /******* SHOW MENU *******/
 function showMenu(navS, navLinksS, burgerS) {
@@ -31,7 +35,7 @@ function showMenu(navS, navLinksS, burgerS) {
 /******* END SHOW MENU *******/
 
 /******* HIDE MENU ONCLICK ITEM *******/
-function hide_menu () {
+function hide_menu() {
     const nav = document.getElementById('nav')
     const navLinks = document.getElementById('nav_links')
     if (nav && navLinks) {
@@ -40,6 +44,7 @@ function hide_menu () {
         navLinks.classList.remove('show-menu-links');
     }
 }
+
 /******* END HIDE MENU *******/
 
 /******* SCROLL SECTIONS ACTIVE LINK *******/
@@ -65,3 +70,50 @@ function activeLink() {
         }
     });
 }
+/******* END SCROLL SECTIONS ACTIVE LINK *******/
+
+/******* FILTER PROJECTS *******/
+function filterProjects(event) {
+
+    // This variable will contain all filters
+    const filters = document.getElementById('filters');
+
+    /* Find the previous filter and remove it */
+    let wantedFilter = filters.firstElementChild;
+   
+   while (wantedFilter !== null) {
+       if (wantedFilter.classList.contains('active-filter')) {
+           wantedFilter.classList.remove('active-filter');
+           break; // In case we find it, we can exit the loop 
+       }
+       wantedFilter = wantedFilter.nextElementSibling;
+   }
+
+    // Getting the filter that was clicked (target)
+    // event.target returns the element that was cliked
+    let filterElement = event.target;
+    // Add the active filter class to the element
+    filterElement.classList.add(('active-filter'));
+    filter = filterElement.getAttribute('data-filter');
+    
+    const projects = document.querySelectorAll('.project');
+    
+    // If the value is all then display all
+    if (filter === 'all') {
+        projects.forEach((project) => project.style.display = 'block');
+    } else {
+        // Checking for each project if they contain the filter value
+        // For those who doesn't contain, display: none 
+        projects.forEach((project) => {
+            if (project.classList.contains(filter)) {
+                project.style.display = 'block';
+            } else {
+                project.style.display = 'none';
+            } 
+        });
+    }
+}
+
+/******* END ACTIVE FILTER *******/
+
+
