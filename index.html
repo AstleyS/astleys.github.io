@@ -80,25 +80,24 @@
                 <br>
                 <br>
                 I love Software Development. I am focused on 
-                <em><span class="job-positions">Software Engineer | Software Developer</span></em> positions or internships.
+                <span class="job-positions">Software Engineer | Software Developer</span> positions or internships.
                 </p>
                 <div class="skills-container">
                     <h5 class="skills-title">What about... my skills?</h5>
                     
                     <div class="skills">
-                        <div class="skill-level">
-                            <h3>Familiar</h3>
-                            <p>Familiar technologies</p>
+                        <div class="skill-level proficient">
+                            <h3>Proficient</h3>
+                            <p>Proficient technologies</p>
                         </div>
-                        
-                        <div class="skill-level">
+
+                        <div class="skill-level intermediate">
                             <h3>Intermediate</h3>
                             <p>Intermediate technologies</p>
                         </div>
-                    
-                        <div class="skill-level">
-                            <h3>Proficient</h3>
-                            <p>Proficient technologies</p>
+                        <div class="skill-level familiar">
+                            <h3>Familiar</h3>
+                            <p>Familiar technologies</p>
                         </div>
                     </div>
                     <p class="watch-resume">Want to check my <a href="doc/resume.pdf" target="_blank">resume</a>?</p>
@@ -132,14 +131,15 @@
                 <form class="form-email" action="mailto:astley_394@hotmail.com" method="POST">
                     
                     <label for="name">Name</label>
-                    <input id="name" type="text" maxlength="20" placeholder="Your name..." >
+                    <input id="name" type="text" maxlength="20" placeholder="Your name..." pattern="[A-Za-z]{4, }" required>
                     <label for="email">Email</label>
-                    <input id="email" type="email" maxlength="20" placeholder="Your email..." >
+                    <input id="email" type="email" placeholder="Your email..." 
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 5}$" title="Invalid email address" required>
 
                     <label for="subject">Subject</label>
-                    <input id="subject" type="text" maxlength="20" placeholder="Your subject..." >
+                    <input id="subject" type="text" maxlength="20" placeholder="Your subject..." pattern="[A-Za-z]{4, }" required>
                     <label for="message">Message</label>
-                    <textarea id="message" rows="10" placeholder="Your message..."  maxlength="500"></textarea>
+                    <textarea id="message" rows="8" placeholder="Your message..."  maxlength="500" pattern="[A-Za-z]{4, 500}" required></textarea>
                     
                     <input type="submit" value="Send Email">
 
