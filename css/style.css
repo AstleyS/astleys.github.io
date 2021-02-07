@@ -66,9 +66,12 @@ section {
 
 /* Represents each section title */
 .title {
-    position: relative;
+    width: max-content;
 
-    text-align: center;
+    position: relative;
+    left: 50%;
+
+    transform: translateX(-50%);
     font-size: var(--section-title-font);
     letter-spacing: var(--mb-1);
     text-transform: uppercase;
@@ -76,7 +79,7 @@ section {
 
 .title::before {
     content: '';
-    width: 50px;
+    width: var(--mb-4);
     height: 2px;
     
     position: absolute;
@@ -87,7 +90,7 @@ section {
 
 .title::after {
     content: '';
-    width: 50px;
+    width: var(--mb-4);
     height: 2px;
     
     position: absolute;
@@ -131,7 +134,7 @@ section {
     margin-left: var(--mb-1);
 
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     letter-spacing: 1.1px;
 }
 
@@ -258,12 +261,13 @@ section {
 /* ====== ABOUT ====== */
 .about-section .title::before {
 	content: '';
-	width: 50px;
+	width: var(--mb-4);
 	height: 2px;
+
 	position: absolute;
 	top: 50%;
 	background: var(--text-color);
-	left: 37.5%;
+	left: -30%;
 }
 
 /* Represents the subtitle of the about section */
@@ -346,6 +350,7 @@ section {
 
 .watch-resume {
     text-align: center;
+    font-size: var(--normal-font);
 }
 
 .watch-resume a {
@@ -357,12 +362,13 @@ section {
 /* ====== PORTFOLIO ====== */
 .portfolio-section .title::before {
 	content: '';
-	width: 50px;
+	width: var(--mb-4);
 	height: 2px;
+
 	position: absolute;
 	top: 50%;
 	background: var(--text-color);
-	left: 33.5%;
+	left: -20%;
 }
 
 .filters {
@@ -383,6 +389,7 @@ section {
     border-radius: var(--mb-1);
     letter-spacing: 1px;
     font-weight: 600;
+    font-size: var(--normal-font);
     transition: 0.3s;
 }
 
@@ -420,12 +427,13 @@ section {
 /* ====== CONTACT ====== */
 .contact-section .title::before {
 	content: '';
-	width: 50px;
+	width: var(--mb-4);
 	height: 2px;
+
 	position: absolute;
 	top: 50%;
 	background: var(--text-color);
-	left: 31.5%;
+	left: -22%;
 }
 
 .contact-section .contact-subtitle {
@@ -436,7 +444,7 @@ section {
 }
 
 .contact-section .contact-content {
-    width: 70%;
+    width: 60%;
     height: 90%;
     margin: var(--mb-2) auto 0;
     padding: 0 var(--mb-2);
@@ -477,8 +485,15 @@ input:focus::placeholder {
     border: solid var(--gradient-color-2);
 }
 
+input[type="submit"] {
+    font-weight: 600;
+    transition: 0.3s;
+}
+
 input[type="submit"]:hover {
     background-color: lightblue;
+    color: white;
+    transform: scale(1.05);
 }
 
 textarea {
@@ -557,6 +572,16 @@ textarea:focus::placeholder {
     For screens with width smaller than 660px
  */
  @media screen and (max-width: 660px) {
+    :root {
+        --biggest-font: 1.65rem;
+        --normal-font: 0.95rem;
+        --section-title-font: 1.35rem;
+    }
+    
+    .headline {
+        font-size: 1rem;
+    }
+
     .nav-links {
        width: 100%;
        margin: 0 3rem 0;
@@ -569,6 +594,14 @@ textarea:focus::placeholder {
    .section-content {
        width: 90%;
    }
+
+   .skill-level h3 {
+    font-size: 1.15rem;
+    }
+
+    .skill-level p {
+        font-size: var(--small-font);
+    }
 }
 
 /* 
@@ -584,6 +617,12 @@ textarea:focus::placeholder {
     For screens with width smaller than 475px
  */
  @media screen and (max-width: 475px) {
+    :root {
+        --biggest-font: 1.45rem;
+        --normal-font: 0.8rem;
+        --section-title-font: 1.25rem;
+    }
+
     section {
         height: auto;
     }
@@ -626,7 +665,7 @@ textarea:focus::placeholder {
         grid-template-columns: repeat(2, 45%);
         gap: var(--mb-1);
     }
- 
+
     .footer-section .social-links {
         display: block;
     }
