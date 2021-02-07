@@ -62,6 +62,37 @@ section {
     margin-top: calc(var(--header-height) + var(--mb-1));
 }
 
+/* Represents each section title */
+.title {
+    position: relative;
+
+    text-align: center;
+    letter-spacing: var(--mb-1);
+    text-transform: uppercase;
+}
+
+.title::before {
+    content: '';
+    width: 50px;
+    height: 2px;
+    
+    position: absolute;
+    top: 50%;
+    
+    background: var(--text-color);
+}
+
+.title::after {
+    content: '';
+    width: 50px;
+    height: 2px;
+    
+    position: absolute;
+    top: 50%;
+    
+    background: var(--text-color);
+}
+
 .section-content {
     width: 80%;
     height: 100%;
@@ -71,7 +102,6 @@ section {
     word-spacing: 0.125rem;
     line-height: 2.3rem;
 }
-
 
 /* ====== HEADER ====== */
 /* Represents the navigation bar */
@@ -129,7 +159,7 @@ section {
 
     display: block;
     
-    background: var(--container-color);
+    background: var(--text-color);
     transition: 0.3s;
 }
 
@@ -184,11 +214,9 @@ section {
     width: 5px;
     height: 5px;
     
-    background-color: var(--container-color);
+    background-color: var(--text-color);
     border-radius: 50%;
 }
-
-/* ====== END HEADER ====== */
 
 /* ====== HOME ====== */
 /* Represents home container */
@@ -225,27 +253,14 @@ section {
 }
 
 /* ====== ABOUT ====== */
-/* Represents each section title */
-.title {
-    text-align: center;
-    letter-spacing: var(--mb-1);
-    text-transform: uppercase;
-}
-
-.title::before {
-    content: '---';
-    width: 50px;
-    height: 2px;
-    position: relative;
-    top: 50%;   
-}
-
-.title::after {
-    content: '---';
-    width: 50px;
-    height: 2px;
-    position: relative;
-    top: 50%;   
+.about-section .title::before {
+	content: '';
+	width: 50px;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	background: var(--text-color);
+	left: 37.5%;
 }
 
 /* Represents the subtitle of the about section */
@@ -305,6 +320,16 @@ section {
 }
 
 /* ====== PORTFOLIO ====== */
+.portfolio-section .title::before {
+	content: '';
+	width: 50px;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	background: var(--text-color);
+	left: 33.5%;
+}
+
 .filters {
     margin-bottom: var(--mb-1);
 
@@ -357,6 +382,16 @@ section {
 }
 
 /* ====== CONTACT ====== */
+.contact-section .title::before {
+	content: '';
+	width: 50px;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	background: var(--text-color);
+	left: 31.5%;
+}
+
 .contact-section .section-content {
     width: 70%;
     height: 90%;

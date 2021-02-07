@@ -56,7 +56,7 @@ function activeLink() {
     sections.forEach(current => {
         // Get section height
         const sectionHeight = current.offsetHeight;
-        // Get the top position of section. -50 because of the header
+        // Get the top position of section. -56 because of the header + margin
         const sectionTop = current.offsetTop - 56;
         // Get the id of the section
         let sectionId = current.getAttribute('id');
