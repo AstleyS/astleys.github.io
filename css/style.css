@@ -160,12 +160,11 @@ section {
 /* Represents toggle menu */
 .burger {
     width: var(--mb-3);
-    margin-left: 15%;
     
     display: none;
+    grid-column: 2 / 3;
 
     justify-self: center;
-    background-color: black;
     cursor: pointer;
 }
 
@@ -459,7 +458,7 @@ textarea:focus::placeholder {
 .show-menu {
     height: 100%;
 
-    grid-template-rows: 20% 1fr;
+    grid-template-rows: 20% 1fr 20%;
     opacity: 1;
     box-shadow: none;
     transition: 0.45s linear;
@@ -492,13 +491,18 @@ textarea:focus::placeholder {
        display: none;
    }
 
-   .about-section {
-       margin-top: var(--mb-2);
-   }
-
    .section-content {
        width: 90%;
    }
+}
+
+/* 
+    For screens with height smaller than 550px
+ */
+ @media screen and (max-height: 550px) {
+    section {
+        height: auto;
+    }
 }
 
 /* 
@@ -560,6 +564,7 @@ textarea:focus::placeholder {
     .nav {
         grid-template-columns: 20% 1fr 20%;
     }
+    
     .headline {
         grid-column: 2 / 3;
         text-align: center;
@@ -570,10 +575,11 @@ textarea:focus::placeholder {
     }
     
     .burger {
-       display: block; 
+       display: block;
+       transition: 0.3s; 
    }
 
    .burger:hover {
-       transform: translateY(-5px);
+       transform: translateY(5px);
    }
 }

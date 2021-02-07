@@ -29,10 +29,11 @@ function showMenu(navS, navLinksS, burgerS) {
             // with the nav and nav_links ids
             nav.classList.toggle('show-menu');
             navLinks.classList.toggle('show-menu-links');
+            burger.style.gridRow = 3 / 4;
+            burger.style.alignSelf = 'flex-start';
         });
     }
 }
-/******* END SHOW MENU *******/
 
 /******* HIDE MENU ONCLICK ITEM *******/
 function hide_menu() {
@@ -45,8 +46,6 @@ function hide_menu() {
     }
 }
 
-/******* END HIDE MENU *******/
-
 /******* SCROLL SECTIONS ACTIVE LINK *******/
 function activeLink() {
     // This variable will contain all sections (that contains an id) of the portfolio
@@ -58,7 +57,7 @@ function activeLink() {
         // Get section height
         const sectionHeight = current.offsetHeight;
         // Get the top position of section. -50 because of the header
-        const sectionTop = current.offsetTop - 50;
+        const sectionTop = current.offsetTop - 56;
         // Get the id of the section
         let sectionId = current.getAttribute('id');
 
@@ -70,7 +69,6 @@ function activeLink() {
         }
     });
 }
-/******* END SCROLL SECTIONS ACTIVE LINK *******/
 
 /******* FILTER PROJECTS *******/
 function filterProjects(event) {
@@ -113,6 +111,5 @@ function filterProjects(event) {
         });
     }
 }
-/******* END ACTIVE FILTER *******/
 
 
