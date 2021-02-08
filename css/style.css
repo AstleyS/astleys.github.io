@@ -103,10 +103,6 @@ section {
     width: 80%;
     height: 100%;
     margin: var(--mb-1) auto var(--mb-1);
-
-    text-align: justify;
-    word-spacing: 0.125rem;
-    line-height: 2.3rem;
 }
 
 /* ====== HEADER ====== */
@@ -240,9 +236,13 @@ section {
     min-width: 225px;
     max-width: 75%;
     min-height: 340px;
-    max-height: 75%;
+    max-height: 80%;
     
-    justify-self: start;
+    position: relative;
+    top: -8%;
+    right: var(--mb-4);
+
+    justify-self: center;
     border-radius: var(--mb-4) 0 var(--mb-4) 0;
     object-fit: cover;
     filter: brightness(80%);
@@ -251,14 +251,53 @@ section {
 
 /* Represents my presentation text */
 .presentation {
-    margin-left: 10%;
+    width: 100%;
+    margin-left: var(--mb-4);
  
     align-self: center;
     justify-self: center;
     font-size: var(--biggest-font);
 }
 
+.typing {
+    position: relative;
+    margin-left: var(--mb-3);
+    bottom: 4.45rem;  
+}
+
+/* Represents the blink presented after the intro 
+.typing::after {
+    content: '';
+    height: 5%;
+    width: 1px;
+
+    position: relative;
+    right: -4px;
+    
+    border-right: 4px solid white;
+    animation: blink 0.5s infinite ease;
+}
+*/
+
+
+/* Blink animation 
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+*/
+
 /* ====== ABOUT ====== */
+.about-section {
+    text-align: justify;
+    word-spacing: 0.125rem;
+    line-height: 2.3rem;
+}
+
 .about-section .title::before {
 	content: '';
 	width: var(--mb-4);
@@ -640,6 +679,8 @@ textarea:focus::placeholder {
         min-height: 210px;
         max-height: 90%;
     
+        top: 0;
+        right: 0;
         grid-row: 1 / 2;
         justify-self: center;
         align-self: flex-end;

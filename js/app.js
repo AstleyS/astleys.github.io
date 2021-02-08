@@ -15,6 +15,43 @@ const filters = document.querySelectorAll('.filters');
 // If any item was clicked, then the we will apply the filter
 filters.forEach(filter => filter.addEventListener('click', filterProjects));
 
+
+/*
+const texts = ['am a Developer', 'love creating solutions'];
+let count = 0;
+let index = 0;
+let currentText = '';
+let letter = '';
+(function type() {
+
+    
+    // Checking if it completed the texts to present
+    if (count === texts.length) {
+        // If it does it resets
+        count = 0;
+    }
+
+    // This variable below holds the text to present from the list
+    currentText = texts[count];
+    
+    // This variable below holds the letter to present from the current text
+    letter = currentText.slice(0, ++index);
+
+    // Displaying the letter(s) in the ".typing" selector
+    document.querySelector('.typing').textContent = letter;
+
+    // Checking if the variable letter is completed
+    if (letter.length == currentText.length) {
+        // If it is, moves to next word(s)
+        count++;
+        index = 0;
+    }
+
+    setTimeout(type, 250);
+
+}());
+*/
+
 /******* SHOW MENU *******/
 function showMenu(navS, navLinksS, burgerS) {
     // Find the selectors in html
