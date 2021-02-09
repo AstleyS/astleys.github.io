@@ -196,7 +196,7 @@ section {
     width: var(--mb-3);
     
     display: none;
-    grid-column: 2 / 3;
+    grid-column: 3 / 4;
 
     justify-self: center;
     cursor: pointer;
@@ -494,7 +494,6 @@ section {
     line-height: 2.3rem;
 }
 
-
 label {
     font-size: var(--normal-font);
     font-weight: 600;
@@ -731,10 +730,5 @@ textarea:focus::placeholder {
     
     .burger {
        display: block;
-       transition: 0.3s; 
-   }
-
-   .burger:hover {
-       transform: translateY(5px);
    }
 }

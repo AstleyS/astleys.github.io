@@ -1,89 +1,69 @@
-// Calling showMenu function with nav, nav_links and burger id names as args
-showMenu('nav', 'nav_links', 'burger');
+// Find the selectors in html
+const nav = document.getElementById('nav');
+const navLinks = document.getElementById('nav_links');
+const burger = document.getElementById('burger');
 
 // This variable will contain all items of the nav-links
 const navItems = document.querySelectorAll('.nav-item');
-// If any item was clicked, then the menu will be removed
+// This variable will contain all filters
+const filters = document.querySelectorAll('.filters');
+
+// The burger icon "listens" for a click event to show the event
+burger.addEventListener('click', showMenu);
+
+// Checks if any item of the menu was clicked. If the menu is on, then the menu will be removed
 navItems.forEach(item => item.addEventListener('click', hide_menu));
 
 // The window will keep "listening" the position of the scroll to indicate the
 // active link
 window.addEventListener('scroll', activeLink);
 
-// This variable will contain all filters
-const filters = document.querySelectorAll('.filters');
 // If any item was clicked, then the we will apply the filter
 filters.forEach(filter => filter.addEventListener('click', filterProjects));
 
-
-/*
-const texts = ['am a Developer', 'love creating solutions'];
-let count = 0;
-let index = 0;
-let currentText = '';
-let letter = '';
-(function type() {
-
-    
-    // Checking if it completed the texts to present
-    if (count === texts.length) {
-        // If it does it resets
-        count = 0;
-    }
-
-    // This variable below holds the text to present from the list
-    currentText = texts[count];
-    
-    // This variable below holds the letter to present from the current text
-    letter = currentText.slice(0, ++index);
-
-    // Displaying the letter(s) in the ".typing" selector
-    document.querySelector('.typing').textContent = letter;
-
-    // Checking if the variable letter is completed
-    if (letter.length == currentText.length) {
-        // If it is, moves to next word(s)
-        count++;
-        index = 0;
-    }
-
-    setTimeout(type, 250);
-
-}());
-*/
-
-/******* SHOW MENU *******/
-function showMenu(navS, navLinksS, burgerS) {
-    // Find the selectors in html
-    const nav = document.getElementById(navS);
-    const navLinks = document.getElementById(navLinksS);
-    const burger = document.getElementById(burgerS);
-
+/*******
+ * SHOW MENU
+ * Function responsible for showing the menu when clicked on menu burger
+*******/
+function showMenu() {
     // Verifies if the selectores are valid 
-    if(nav && navLinks && burger){
-        burger.addEventListener('click', ()=>{
-            // We add the show-menu and show-menu-links classes to the nav and navlinks (respectivelly)
-            // with the nav and nav_links ids
-            nav.classList.toggle('show-menu');
-            navLinks.classList.toggle('show-menu-links');
-            burger.style.gridRow = 3 / 4;
-            burger.style.alignSelf = 'flex-start';
-        });
+    if (nav && navLinks) {
+        // We add the show-menu and show-menu-links classes to the nav and navlinks (respectivelly)
+        // with the nav and nav_links ids
+        nav.classList.toggle('show-menu');
+        navLinks.classList.toggle('show-menu-links');
+        // Re-position the burger
+        burger.style.gridRow = 3 / 4;
+        burger.style.alignSelf = 'center';
+        // Add some type of flag to warn that is on
+        burger.classList.add('on');
+
+        // Hide the scroll
+        document.querySelector('html').style.overflowY = 'hidden';     
     }
 }
 
-/******* HIDE MENU ONCLICK ITEM *******/
+/*******
+ *  HIDE MENU
+ * Function responsible for hiding the menu when clicked on a nav link or menu burger
+*******/
 function hide_menu() {
-    const nav = document.getElementById('nav')
-    const navLinks = document.getElementById('nav_links')
+    // Verifies if the selectores are valid
     if (nav && navLinks) {
         // Removes the show-menu and show-menu-links classes to the nav and nav_links
-        nav.classList.remove('show-menu');
-        navLinks.classList.remove('show-menu-links');
+        nav.classList.toggle('show-menu');
+        navLinks.classList.toggle('show-menu-links');
+        burger.classList.remove('on');
+
+        document.querySelector('html').overflowY = 'scroll';
     }
 }
 
-/******* SCROLL SECTIONS ACTIVE LINK *******/
+
+/*******
+ * SCROLL SECTIONS ACTIVE LINK
+ * Function responsible for finding the active section
+*******/
 function activeLink() {
     // This variable will contain all sections (that contains an id) of the portfolio
     const sections = document.querySelectorAll('section[id]');
@@ -107,7 +87,10 @@ function activeLink() {
     });
 }
 
-/******* FILTER PROJECTS *******/
+/******* 
+ * FILTER PROJECTS
+ * Function responsible for filtering the projects on portfolio section 
+*******/
 function filterProjects(event) {
 
     // This variable will contain all filters
@@ -149,4 +132,38 @@ function filterProjects(event) {
     }
 }
 
+/*
+const texts = ['am a Developer', 'love creating solutions'];
+let count = 0;
+let index = 0;
+let currentText = '';
+let letter = '';
+(function type() {
 
+    
+    // Checking if it completed the texts to present
+    if (count === texts.length) {
+        // If it does it resets
+        count = 0;
+    }
+
+    // This variable below holds the text to present from the list
+    currentText = texts[count];
+    
+    // This variable below holds the letter to present from the current text
+    letter = currentText.slice(0, ++index);
+
+    // Displaying the letter(s) in the ".typing" selector
+    document.querySelector('.typing').textContent = letter;
+
+    // Checking if the variable letter is completed
+    if (letter.length == currentText.length) {
+        // If it is, moves to next word(s)
+        count++;
+        index = 0;
+    }
+
+    setTimeout(type, 250);
+
+}());
+*/
