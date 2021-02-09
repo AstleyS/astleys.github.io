@@ -14,8 +14,7 @@ burger.addEventListener('click', showMenu);
 // Checks if any item of the menu was clicked. If the menu is on, then the menu will be removed
 navItems.forEach(item => item.addEventListener('click', hide_menu));
 
-// The window will keep "listening" the position of the scroll to indicate the
-// active link
+// The window will keep "listening" the position of the scroll to indicate the active link
 window.addEventListener('scroll', activeLink);
 
 // If any item was clicked, then the we will apply the filter
@@ -33,13 +32,9 @@ function showMenu() {
         nav.classList.toggle('show-menu');
         navLinks.classList.toggle('show-menu-links');
         // Re-position the burger
-        burger.style.gridRow = 3 / 4;
         burger.style.alignSelf = 'center';
         // Add some type of flag to warn that is on
-        burger.classList.add('on');
-
-        // Hide the scroll
-        document.querySelector('html').style.overflowY = 'hidden';     
+        burger.classList.add('on');     
     }
 }
 
@@ -55,10 +50,8 @@ function hide_menu() {
         navLinks.classList.toggle('show-menu-links');
         burger.classList.remove('on');
 
-        document.querySelector('html').overflowY = 'scroll';
     }
 }
-
 
 /*******
  * SCROLL SECTIONS ACTIVE LINK
