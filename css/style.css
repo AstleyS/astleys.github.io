@@ -241,8 +241,9 @@ section {
     position: relative;
     top: -8%;
     right: var(--mb-4);
-
+    align-self: center;
     justify-self: center;
+
     border-radius: var(--mb-4) 0 var(--mb-4) 0;
     object-fit: cover;
     filter: brightness(80%);
@@ -254,8 +255,11 @@ section {
     width: 100%;
     margin-left: var(--mb-4);
  
+    position: relative;
+    top: -8%;
     align-self: center;
     justify-self: center;
+
     font-size: var(--biggest-font);
 }
 
@@ -484,7 +488,7 @@ section {
 
 .contact-section .contact-content {
     width: 60%;
-    height: 90%;
+    height: max-content;
     margin: var(--mb-2) auto 0;
     padding: 0 var(--mb-2);
 
@@ -607,6 +611,19 @@ textarea:focus::placeholder {
 /* ====== MEDIA QUERIES ====== */
 
 /* 
+    For screens with width between 765px-990px
+ */
+ @media screen and (max-width: 900px) and (min-width: 765px) {
+    .me-img {
+        top: -15%;
+    }
+
+    .presentation {
+        top: -15%;
+    }
+ }
+
+/* 
     For screens with width smaller than 660px
  */
  @media screen and (max-width: 660px) {
@@ -618,6 +635,14 @@ textarea:focus::placeholder {
     
     .headline {
         font-size: 1rem;
+    }
+
+    .me-img {
+        top: -20%;
+    }
+    
+    .presentation {
+        top: -20%;
     }
 
     .nav-links {
@@ -674,7 +699,7 @@ textarea:focus::placeholder {
     .me-img {
         margin-top: var(--mb-3);
         min-width: 165px;
-        max-width: 45%;
+        max-width: 58%;
         min-height: 210px;
         max-height: 90%;
     
@@ -689,7 +714,8 @@ textarea:focus::placeholder {
 
     .presentation {
         margin-left: 0%;
-        
+
+        top: 0;
         align-self: flex-start;
         justify-self: center;
 
@@ -706,9 +732,11 @@ textarea:focus::placeholder {
         gap: var(--mb-1);
     }
 
-    .footer-section .social-links {
-        display: block;
+    .contact-section .contact-content {
+        width: 80%;
+        height: 80%;
     }
+
 } 
 
 /* 
