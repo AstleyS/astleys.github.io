@@ -360,7 +360,7 @@ section {
     transition: 0.3s;
 }
 
-.skill-level.intermediate {
+.skill-level.more-familiar {
     padding: 0.25rem var(--mb-1) 0.25rem;
     
     text-align: center;
@@ -387,7 +387,12 @@ section {
     font-weight: var(--semi-bold);
 }
 
-.skill-level p {
+.skill-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.skill-list li {
     font-size: var(--normal-font);
 }
 
