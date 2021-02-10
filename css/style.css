@@ -452,11 +452,29 @@ section {
 }
 
 .portfolio .project {
-    width: 12rem;
-    height: 15rem;
+    width: 20rem;
+    height: 20rem;
     margin: var(--mb-1);
 
     position: relative;
+    box-shadow: 2px 0px 8px var(--light-blue);
+    transition: 0.3s;
+}
+
+.portfolio .project .project-name {
+	width: max-content;
+	padding: var(--mb-1);
+    
+    position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+
+	color: var(--text-color);
+	background-color: var(--light-blue);
+	border: 2px solid var(--light-blue);
+	border-radius: var(--mb-1);
+	transform: translate(-50%, -50%);
 }
 
 .portfolio .project img {
@@ -469,7 +487,13 @@ section {
     
     background-color: var(--light-blue);
     border-radius: var(--mb-1);
+    box-shadow: 2px 0px 8px var(--light-blue);
     object-fit: cover;
+    opacity: 0.4;
+}
+
+.portfolio .project:hover {
+    box-shadow: 2px 0px 12px var(--light-blue);
 }
 
 /* ====== CONTACT ====== */
