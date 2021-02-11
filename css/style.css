@@ -619,18 +619,28 @@ textarea:focus::placeholder {
 /* ====== END CONTACT ====== */
 
 /* ====== FOOTER ====== */
- .footer-section .social-links {
-    width: 20%;
-    height: 1rem;
-
-    display: grid;
-    justify-content: space-around;
-    grid-template-columns: repeat(4, 1fr);
-
+.footer-section {
+    margin: var(--mb-2) 0 var(--mb-2) var(--mb-1);
 }
 
-.footer-section .social-links img {
-    width: 20px;
+.footer-section  .footer-title {
+    display: inline-block;
+    
+    background: var(--portfolio-color);
+    text-transform: uppercase;
+    font-size: 1.25rem;
+}
+
+.footer-section .social-links {
+    margin-bottom: var(--mb-1);
+}
+
+.footer-section .social {
+    padding: var(--mb-1);
+}
+
+.footer-section .social img {
+    width: 21px;
     
     opacity: 0.5;
     cursor: pointer;
@@ -638,13 +648,13 @@ textarea:focus::placeholder {
 }
 
 .footer-section .social-links img:hover {
-    transform: scale(1.2);
-    
+    transform: scale(1.5);
     opacity: 1;
 }
 
 .footer-copy {
-    margin: var(--mb-2) 0  var(--mb-2) var(--mb-1);       
+    font-size: var(--normal-font);  
+    font-weight: 600;     
 }
 /* ====== END FOOTER ====== */
 
@@ -710,10 +720,6 @@ textarea:focus::placeholder {
     .nav-links {
        width: 100%;
        margin: 0 3rem 0;
-   }
-
-   .social-links img {
-       display: none;
    }
 
    .section-content {
