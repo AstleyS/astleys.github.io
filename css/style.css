@@ -470,9 +470,7 @@ section {
 	z-index: 1;
 
 	color: var(--text-color);
-	background-color: var(--light-blue);
-	border: 2px solid var(--light-blue);
-	border-radius: var(--mb-1);
+    text-decoration: underline 1.5px;
 	transform: translate(-50%, -50%);
 }
 
