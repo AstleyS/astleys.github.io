@@ -22,40 +22,39 @@ filters.forEach(filter => filter.addEventListener('click', filterProjects));
  * Function responsible for showing or hiding the menu when clicked on menu burger
 *******/
 function showHideMenu(event) {
-    const element = event.target.classList[0];
+    const element = event.target;
 
-    switch (element) {
-        case 'nav-item': 
-            if (burger.classList.contains('on')) {
-                // Removes the show-menu and show-menu-links classes to the nav and nav_links
-                nav.classList.remove('show-menu');
-                navLinks.classList.remove('show-menu-links');
-                burger.classList.remove('on');
+    if (element.classList.contains('nav-item')) {
+        
+        if (burger.classList.contains('on')) {
+            // Removes the show-menu and show-menu-links classes to the nav and nav_links
+            nav.classList.remove('show-menu');
+            navLinks.classList.remove('show-menu-links');
+            burger.classList.remove('on');
 
-                document.querySelector('html').style.overflow = 'scroll';
-            }
-            break;
-        case 'burger':
-            if (burger.classList.contains('on')) {
-                // Removes the show-menu and show-menu-links classes to the nav and nav_links
-                nav.classList.remove('show-menu');
-                navLinks.classList.remove('show-menu-links');
-                burger.classList.remove('on');
+            document.querySelector('html').style.overflow = 'scroll';
+        }
+    } else if (element.classList.contains('burger')) {
 
-                document.querySelector('html').style.overflow = 'scroll';
-            } else {
-                // We add the show-menu and show-menu-links classes to the nav and navlinks (respectivelly)
-                // with the nav and nav_links ids
-                nav.classList.add('show-menu');
-                navLinks.classList.add('show-menu-links');
-                // Re-position the burger
-                burger.style.alignSelf = 'center';
-                // Add some type of flag to warn that is on
-                burger.classList.add('on');   
-                
-                document.querySelector('html').style.overflow = 'hidden';
-            }
-            break;
+        if (burger.classList.contains('on')) {
+            // Removes the show-menu and show-menu-links classes to the nav and nav_links
+            nav.classList.remove('show-menu');
+            navLinks.classList.remove('show-menu-links');
+            burger.classList.remove('on');
+
+            document.querySelector('html').style.overflow = 'scroll';
+        } else {
+            // We add the show-menu and show-menu-links classes to the nav and navlinks (respectivelly)
+            // with the nav and nav_links ids
+            nav.classList.add('show-menu');
+            navLinks.classList.add('show-menu-links');
+            // Re-position the burger
+            burger.style.alignSelf = 'center';
+            // Add some type of flag to warn that is on
+            burger.classList.add('on');   
+            
+            document.querySelector('html').style.overflow = 'hidden';
+        }
     }
 }
 
