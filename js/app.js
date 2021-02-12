@@ -77,7 +77,7 @@ function activeLink() {
         let sectionId = current.getAttribute('id');
 
         // Verifying in which section the scroll position is on 
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        if (scrollY >= sectionTop && scrollY <= sectionTop + sectionHeight) {
             document.querySelector('.nav-links a[href*=' + sectionId + ']').classList.add('active-link');
         } else {
             document.querySelector('.nav-links a[href*=' + sectionId + ']').classList.remove('active-link');
@@ -129,6 +129,38 @@ function filterProjects(event) {
         });
     }
 }
+
+/******* 
+ * SCROLL REVEAL
+ * Library responsible for scroll reveal transition on  
+*******/
+
+const scrollReveal = ScrollReveal({ 
+    distance: '80px', // Distance covered to the static position
+    duration: 1800, // Duration of the transition in ms (1800ms = 1,8s)
+    reset: true, // Boolean value on if we want to reset the transition or not
+});
+
+//
+scrollReveal.reveal(`.presentation, .availability-status, .skills-title`, {
+    origin: 'left' // direction of the transition
+})
+
+scrollReveal.reveal(`.me-img, .filters`, {
+    origin: 'right' // direction of the transition
+})
+
+scrollReveal.reveal(`.skill-level`, {
+    origin: 'bottom', // direction of the transition
+    interval: 1500 // Time between each reveal
+})
+
+scrollReveal.reveal(`.headline, .nav-links, .title,
+           .section-content,
+           .footer-section`, {
+    origin: 'top', // direction of the transition
+    interval: 1000 // Time between each reveal
+})
 
 /*
 const texts = ['am a Developer', 'love creating solutions'];
