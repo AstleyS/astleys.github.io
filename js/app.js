@@ -144,7 +144,7 @@ function filterProjects(event) {
 *******/
 function scrollToTop() {
     // When the scroll is higher than 300 viewport height, add the show-scroll class to the a tag with the scroll-top class
-    if(window.scrollY > 300) {
+    if(window.scrollY > 10) {
         scrollTop.classList.add('show-scrolltop'); 
     } else {
         scrollTop.classList.remove('show-scrolltop');
@@ -179,7 +179,7 @@ scrollReveal.reveal(`.title,
            .section-content,
            .footer-section`, {
     origin: 'top', // direction of the transition
-    interval: 1000 // Time between each reveal
+    interval: 800 // Time between each reveal
 })
 
 /*
