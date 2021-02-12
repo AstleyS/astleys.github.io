@@ -2,6 +2,7 @@
 const nav = document.getElementById('nav');
 const navLinks = document.getElementById('nav_links');
 const burger = document.getElementById('burger');
+const socials = document.getElementById('social_links');
 
 // This variable will contain all items of the nav-links
 const navItems = document.querySelectorAll('.nav-item');
@@ -31,6 +32,7 @@ function showHideMenu(event) {
             nav.classList.remove('show-menu');
             navLinks.classList.remove('show-menu-links');
             burger.classList.remove('on');
+            socials.classList.remove('show-menu-social');
 
             document.querySelector('html').style.overflow = 'scroll';
         }
@@ -40,6 +42,7 @@ function showHideMenu(event) {
             // Removes the show-menu and show-menu-links classes to the nav and nav_links
             nav.classList.remove('show-menu');
             navLinks.classList.remove('show-menu-links');
+            socials.classList.remove('show-menu-social');
             burger.classList.remove('on');
 
             document.querySelector('html').style.overflow = 'scroll';
@@ -48,6 +51,7 @@ function showHideMenu(event) {
             // with the nav and nav_links ids
             nav.classList.add('show-menu');
             navLinks.classList.add('show-menu-links');
+            socials.classList.add('show-menu-social');
             // Re-position the burger
             burger.style.alignSelf = 'center';
             // Add some type of flag to warn that is on
@@ -134,7 +138,6 @@ function filterProjects(event) {
  * SCROLL REVEAL
  * Library responsible for scroll reveal transition on  
 *******/
-
 const scrollReveal = ScrollReveal({ 
     distance: '80px', // Distance covered to the static position
     duration: 1800, // Duration of the transition in ms (1800ms = 1,8s)
@@ -152,10 +155,10 @@ scrollReveal.reveal(`.me-img, .filters`, {
 
 scrollReveal.reveal(`.skill-level`, {
     origin: 'bottom', // direction of the transition
-    interval: 1500 // Time between each reveal
+    interval: 1200 // Time between each reveal
 })
 
-scrollReveal.reveal(`.headline, .nav-links, .title,
+scrollReveal.reveal(`.title,
            .section-content,
            .footer-section`, {
     origin: 'top', // direction of the transition
