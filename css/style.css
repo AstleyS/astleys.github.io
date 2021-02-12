@@ -652,7 +652,7 @@ textarea:focus::placeholder {
     
     background: var(--portfolio-color);
     text-transform: uppercase;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
 }
 
 .footer-section .social-links {
@@ -886,10 +886,4 @@ textarea:focus::placeholder {
     .burger {
        display: block;
    }
-   .scrolltop {
-       padding: var(--mb-1);
-   }
-   .scrolltop-icon {
-    font-size: var(--mb-2);
-}
 }

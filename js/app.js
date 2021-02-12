@@ -154,14 +154,13 @@ function scrollToTop() {
 /******* 
  * SCROLL REVEAL
  * Library responsible for scroll reveal transition on  
-*******/
+******
 const scrollReveal = ScrollReveal({ 
     distance: '80px', // Distance covered to the static position
     duration: 1800, // Duration of the transition in ms (1800ms = 1,8s)
     reset: true, // Boolean value on if we want to reset the transition or not
 });
 
-//
 scrollReveal.reveal(`.presentation, .availability-status, .skills-title`, {
     origin: 'left' // direction of the transition
 })
@@ -181,6 +180,7 @@ scrollReveal.reveal(`.title,
     origin: 'top', // direction of the transition
     interval: 800 // Time between each reveal
 })
+*/
 
 /*
 const texts = ['am a Developer', 'love creating solutions'];
