@@ -682,6 +682,33 @@ textarea:focus::placeholder {
 }
 
 /* ====== OTHERS ====== */
+
+.scrolltop {
+    padding: var(--mb-2);
+    
+    position: fixed;
+    right: var(--mb-2);
+    display: flex;
+
+    color: white;
+    background: var(--text-color);
+    border-radius: var(--mb-1);
+    transition: 0.3s;
+}
+
+.scrolltop:hover {
+    transform: scale(1.2);
+}
+
+.scrolltop-icon {
+    font-size: var(--mb-3);
+    color: var(--body-color);
+}
+
+.show-scrolltop {
+    bottom: 1.5rem;
+}
+
 /* Represents the class that manipulates the nav property when the user clicks on view menu (smaller screens) */
 .show-menu {
     height: 100%;

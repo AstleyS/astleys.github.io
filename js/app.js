@@ -3,6 +3,7 @@ const nav = document.getElementById('nav');
 const navLinks = document.getElementById('nav_links');
 const burger = document.getElementById('burger');
 const socials = document.getElementById('social_links');
+const scrollTop = document.getElementById('scroll_top');
 
 // This variable will contain all items of the nav-links
 const navItems = document.querySelectorAll('.nav-item');
@@ -14,6 +15,9 @@ nav.addEventListener('click', showHideMenu);
 
 // The window will keep "listening" the position of the scroll to indicate the active link
 window.addEventListener('scroll', activeLink);
+
+// The window will keep "listening" the position of the scroll to scroll to the top
+window.addEventListener('scroll', scrollToTop);
 
 // If any item was clicked, then the we will apply the filter
 filters.forEach(filter => filter.addEventListener('click', filterProjects));
@@ -132,6 +136,19 @@ function filterProjects(event) {
             } 
         });
     }
+}
+
+/******* 
+ * SHOW SCROLL TOP
+ * Function responsible for scrolling to the top 
+*******/
+function scrollToTop() {
+    // When the scroll is higher than 300 viewport height, add the show-scroll class to the a tag with the scroll-top class
+    if(window.scrollY > 300) {
+        scrollTop.classList.add('show-scrolltop'); 
+    } else {
+        scrollTop.classList.remove('show-scrolltop');
+    } 
 }
 
 /******* 
