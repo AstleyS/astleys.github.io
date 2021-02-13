@@ -302,6 +302,8 @@ section {
 
 /* ====== ABOUT ====== */
 .about-section {
+    height: max-content;
+
     text-align: justify;
     word-spacing: 0.125rem;
     line-height: 2.3rem;
@@ -351,9 +353,15 @@ section {
 
 .skills {
     margin: var(--mb-2) 0 var(--mb-4);
+    
     display: grid;
-    justify-content: space-between;
-    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(3, max-content);
+    gap: var(--mb-3);
+}
+
+.skill-level {
+    width: max-content;
+    justify-self: center;
 }
 
 .skill-level.proficient {
@@ -363,6 +371,7 @@ section {
     box-shadow: 2px 2px 12px #0ac105;
     border-radius: var(--mb-2);
     transition: 0.3s;
+
 }
 
 .skill-level.more-familiar {
@@ -375,6 +384,7 @@ section {
 }
 
 .skill-level.familiar {
+    width: 100%;
     padding: 0.25rem var(--mb-1) 0.25rem;
     
     text-align: center;
@@ -394,7 +404,12 @@ section {
 
 .skill-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: max-content;
+}
+
+.skill-level.familiar .skill-list {
+    width: 100%;
 }
 
 .skill-list li {
@@ -780,11 +795,11 @@ textarea:focus::placeholder {
     .nav-links {
        width: 100%;
        margin: 0 3rem 0;
-   }
+    }
 
    .section-content {
        width: 90%;
-   }
+    }
 
    .skill-level h3 {
     font-size: 1.15rem;
@@ -794,6 +809,30 @@ textarea:focus::placeholder {
         font-size: var(--small-font);
     }
 }
+
+/* 
+    For screens with width smaller than 600px
+ */
+ @media screen and (max-width: 600px) {
+     .skills {
+         grid-template-columns: 1fr;
+         gap: var(--mb-4);
+     }
+     
+     .skill-level {
+         width: unset;
+         justify-self: unset;
+     }
+     
+     .skill-list {
+         grid-template-columns: 1fr 1fr;
+         width: unset;
+     }
+     
+     .skill-level.familiar .skill-list {
+         width: unset;
+     }
+ }
 
 /* 
     For screens with height smaller than 550px
@@ -810,7 +849,7 @@ textarea:focus::placeholder {
  @media screen and (max-width: 475px) {
     :root {
         --biggest-font: 1.45rem;
-        --normal-font: 0.8rem;
+        --normal-font: 0.95rem;
         --section-title-font: 1.25rem;
     }
 
@@ -854,10 +893,8 @@ textarea:focus::placeholder {
         width: 95%;
     }
 
-    .skills {
-        justify-content: space-evenly;
-        grid-template-columns: repeat(2, 45%);
-        gap: var(--mb-1);
+    .about-section {
+        line-height: 2.5rem;
     }
 
     .contact-section .contact-content {

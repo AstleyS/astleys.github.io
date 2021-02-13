@@ -157,13 +157,13 @@ function scrollToTop() {
 *******/
 const scrollReveal = ScrollReveal({ 
     distance: '80px', // Distance covered to the static position
-    duration: 1800, // Duration of the transition in ms (1800ms = 1,8s)
+    duration: 1500, // Duration of the transition in ms (1800ms = 1,8s)
     reset: true, // Boolean value on if we want to reset the transition or not
 });
 
 const scrollReveal2 = ScrollReveal({ 
     distance: '5px', // Distance covered to the static position
-    duration: 1800, // Duration of the transition in ms (1800ms = 1,8s)
+    duration: 1500, // Duration of the transition in ms (1800ms = 1,8s)
     reset: true, // Boolean value on if we want to reset the transition or not
 });
 
