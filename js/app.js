@@ -143,7 +143,7 @@ function filterProjects(event) {
  * Function responsible for scrolling to the top 
 *******/
 function scrollToTop() {
-    // When the scroll is higher than 300 viewport height, add the show-scroll class to the a tag with the scroll-top class
+    // When the scroll is higher than 10 viewport height, add the show-scroll class to the a tag with the scroll-top class
     if(window.scrollY > 10) {
         scrollTop.classList.add('show-scrolltop'); 
     } else {
@@ -154,9 +154,15 @@ function scrollToTop() {
 /******* 
  * SCROLL REVEAL
  * Library responsible for scroll reveal transition on  
-******
+*******/
 const scrollReveal = ScrollReveal({ 
     distance: '80px', // Distance covered to the static position
+    duration: 1800, // Duration of the transition in ms (1800ms = 1,8s)
+    reset: true, // Boolean value on if we want to reset the transition or not
+});
+
+const scrollReveal2 = ScrollReveal({ 
+    distance: '5px', // Distance covered to the static position
     duration: 1800, // Duration of the transition in ms (1800ms = 1,8s)
     reset: true, // Boolean value on if we want to reset the transition or not
 });
@@ -165,7 +171,7 @@ scrollReveal.reveal(`.presentation, .availability-status, .skills-title`, {
     origin: 'left' // direction of the transition
 })
 
-scrollReveal.reveal(`.me-img, .filters`, {
+scrollReveal2.reveal(`.me-img, .filters`, {
     origin: 'right' // direction of the transition
 })
 
@@ -180,7 +186,7 @@ scrollReveal.reveal(`.title,
     origin: 'top', // direction of the transition
     interval: 800 // Time between each reveal
 })
-*/
+
 
 /*
 const texts = ['am a Developer', 'love creating solutions'];
