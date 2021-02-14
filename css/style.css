@@ -582,7 +582,8 @@ section {
 }
 
 .contact-section {
-    height: 50vh;
+    height: max-content;
+    margin-bottom: 3rem;
 }
 
 .contact-section .contact-subtitle {
@@ -604,6 +605,10 @@ section {
     line-height: 2.3rem;
 }
 
+.form-email {
+    padding-bottom: var(--mb-2);
+}
+
 label {
     font-size: var(--normal-font);
     font-weight: 600;
@@ -621,26 +626,23 @@ input {
 
     display: block;
     
-    border-radius: var(--mb-1);
-}
-
-input::placeholder {
     background: #f5f5f5;
+    border-radius: var(--mb-1);
+    transition: 0.3s;
 }
 
-input:focus::placeholder {
-    color: transparent;
-    border: solid var(--gradient-color-2);
+input:focus {
+    border: solid var(--text-color);
 }
 
 input[type="submit"] {
+    color: white;
+    background-color: var(--light-blue);
     font-weight: 600;
     transition: 0.3s;
 }
 
 input[type="submit"]:hover {
-    background-color: lightblue;
-    color: white;
     transform: scale(1.05);
 }
 
@@ -649,16 +651,12 @@ textarea {
     padding: var(--mb-1);
 
     resize: none;
-    transition: color 0.5s ease;
+    border-radius: var(--mb-1);
+    transition: 0.3s ease;
 }
 
-textarea::placeholder {
-    color: grey;
-}
-
-textarea:focus::placeholder {
-    color: transparent;
-    border: solid var(--gradient-color-2);
+textarea:focus {
+    border: solid var(--text-color);
 }
 
 /* ====== FOOTER ====== */

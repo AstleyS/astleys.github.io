@@ -177,7 +177,7 @@ scrollReveal2.reveal(`.me-img, .filters`, {
 
 scrollReveal.reveal(`.skill-level`, {
     origin: 'bottom', // direction of the transition
-    interval: 1200 // Time between each reveal
+    interval: 1000 // Time between each reveal
 })
 
 scrollReveal.reveal(`.title,

@@ -156,6 +156,25 @@
             <h2 class="title contact-title">Contact</h2>
             <div class="section-content contact-content">
                 <h4 class="contact-subtitle">Any Questions? I will be glad to answer it?</h4>
+                
+                
+                <form class="form-email" action="" method="POST">
+                    
+                    <label for="name">Name</label>
+                    <input id="name" type="text" maxlength="20" placeholder="Your name..." pattern="[A-Za-z]{4, }" required>
+                    <label for="email">Email</label>
+                    <input id="email" type="email" placeholder="Your email..." 
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 5}$" title="Invalid email address" required>
+
+                    <label for="subject">Subject</label>
+                    <input id="subject" type="text" maxlength="20" placeholder="Your subject..." pattern="[A-Za-z]{4,}" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="8" placeholder="Your message..."  maxlength="500" pattern="[A-Za-z]{4,}" required></textarea>
+                    
+                    <input type="submit" value="Send Email">
+
+                </form>
+
             </div>
         </section>
     
