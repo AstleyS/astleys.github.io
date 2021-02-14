@@ -188,7 +188,7 @@ scrollReveal.reveal(`.title,
 })
 
 
-/*
+
 const texts = ['am a Developer', 'love creating solutions'];
 let count = 0;
 let index = 0;
@@ -222,4 +222,3 @@ let letter = '';
     setTimeout(type, 250);
 
 }());
-*/

@@ -272,11 +272,9 @@ section {
 
 .typing {
     position: relative;
-    margin-left: var(--mb-3);
-    bottom: 4.45rem;  
 }
 
-/* Represents the blink presented after the intro 
+/* Represents the blink presented after the intro */
 .typing::after {
     content: '';
     height: 5%;
@@ -288,8 +286,8 @@ section {
     border-right: 4px solid white;
     animation: blink 0.5s infinite ease;
 }
-*/
-/* Blink animation 
+
+/* Blink animation */
 @keyframes blink {
     0% {
         opacity: 0;
@@ -298,7 +296,7 @@ section {
         opacity: 1;
     }
 }
-*/
+
 
 /* ====== ABOUT ====== */
 .about-section {
