@@ -581,6 +581,10 @@ section {
 	left: -22%;
 }
 
+.contact-section {
+    height: 50vh;
+}
+
 .contact-section .contact-subtitle {
     margin-bottom: var(--mb-1);
 
