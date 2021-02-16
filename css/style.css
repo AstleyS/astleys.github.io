@@ -297,7 +297,6 @@ section {
     }
 }
 
-
 /* ====== ABOUT ====== */
 .about-section {
     height: max-content;
@@ -624,7 +623,6 @@ input {
 
     display: block;
     
-    background: #f5f5f5;
     border-radius: var(--mb-1);
     transition: 0.3s;
 }

@@ -35,8 +35,9 @@ function showHideMenu(event) {
             // Removes the show-menu and show-menu-links classes to the nav and nav_links
             nav.classList.remove('show-menu');
             navLinks.classList.remove('show-menu-links');
-            burger.classList.remove('on');
             socials.classList.remove('show-menu-social');
+            burger.innerText = 'menu';
+            burger.classList.remove('on');
 
             document.querySelector('html').style.overflow = 'scroll';
         }
@@ -47,6 +48,7 @@ function showHideMenu(event) {
             nav.classList.remove('show-menu');
             navLinks.classList.remove('show-menu-links');
             socials.classList.remove('show-menu-social');
+            burger.innerText = 'menu';
             burger.classList.remove('on');
 
             document.querySelector('html').style.overflow = 'scroll';
@@ -58,6 +60,7 @@ function showHideMenu(event) {
             socials.classList.add('show-menu-social');
             // Re-position the burger
             burger.style.alignSelf = 'center';
+            burger.innerText = 'clear';
             // Add some type of flag to warn that is on
             burger.classList.add('on');   
             
