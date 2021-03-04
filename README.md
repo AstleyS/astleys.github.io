@@ -1,2 +1,3 @@
 # This is Astley's Personal Web Portfolio
-## Website still in progress.
+
+In this project, I developed my Digital Portfolio (this one) using solely Html, Css and Javascript

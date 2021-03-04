@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Astley's Digital Portfolio</title>
     <script>
-        alert("Contact form unavailable :(\nPlease contact me via other social available.");
+        // alert("Contact form unavailable :(\nPlease contact me via other social available.");
     </script>
 </head>
 <body>
@@ -135,16 +135,90 @@
             <ul id="filters" class="filters">
                 <li class="filter active-filter" data-filter="all">All</li>
                 <li class="filter" data-filter="web">HTML/CSS/JS</li>
+                <li class="filter" data-filter="angular">Angular</li>
+                <li class="filter" data-filter="react">ReactJS</li>
             </ul>
             <div class="section-content portfolio">
+                <!-- PORTFOLIO PROJECT -->
                 <div class="project web">
                     <div class="front">
                         <h3 class="project-name">Digital Portfolio</h3>
-                        <img src="img/screenshot_portfolio.png" alt="portfolio">
+                        <img class="project-img" src="img/screenshot_portfolio.png" alt="portfolio">
                     </div>
                     <div class="back">
                         <h3 class="project-name">Digital Portfolio</h3>
                         <p class="project-description">In this project, I developed my Digital Portfolio (this one) using solely Html, Css and Javascript.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/AstleyS/astleys.github.io" target="_blank">
+                                <img src="img/github.svg" alt="my-github">
+                            </a>
+                            <a href="https://astleys.github.io/" target="_blank">
+                                <span class="material-icons" style="font-size: 35px;">language</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- PATHFINDER PROJECT -->
+                <div class="project web react">
+                    <div class="front">
+                        <h3 class="project-name">Path Finder</h3>
+                    </div>
+                    <div class="back">
+                        <h3 class="project-name">Path Finder Visualizer</h3>
+                        <p class="project-description">
+                            In this project, I created a Path Finder Algorithm Visualizer using the React.js framework.
+                            You can visualize the process of certain algorithms for finding the shortest path between two nodes.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/AstleyS/web-pathfinder-visualizer" target="_blank">
+                                <img src="img/github.svg" alt="my-github">
+                            </a>
+                            <a href="" target="_blank">
+                                <span class="material-icons" style="font-size: 35px;">language</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- SORTING ALGO VISUALIZER PROJECT -->
+                <div class="project web react">
+                    <div class="front">
+                        <h3 class="project-name">Sorting Algorithm</h3>
+                    </div>
+                    <div class="back">
+                        <h3 class="project-name">Sorting Algorithm Visualizer</h3>
+                        <p class="project-description">
+                            In this project, I created a Sorting Algorithm Visualizer using the React.js framework.
+                            You can visualize the process of certain algorithms for sorting an array.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/AstleyS/web-sorting-visualizer" target="_blank">
+                                <img src="img/github.svg" alt="my-github">
+                            </a>
+                            <a href="" target="_blank">
+                                <span class="material-icons" style="font-size: 35px;">language</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- ANGULAR TODO LIST -->
+                <div class="project web angular">
+                    <div class="front">
+                        <h3 class="project-name">Angular Todolist</h3>
+                    </div>
+                    <div class="back">
+                        <h3 class="project-name">Angular Todolist</h3>
+                        <p class="project-description">
+                            In this project, I created a simple todo-list using the Angular framework. 
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/AstleyS/web-angular-todolist" target="_blank">
+                                <img src="img/github.svg" alt="my-github">
+                            </a>
+                            <a href="" target="_blank">
+                                <span class="material-icons" style="font-size: 35px;">language</span>
+                            </a>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -153,6 +227,7 @@
         <!-- ====== CONTACT ====== -->
         <section class="section contact-section" id="contact">
             <h2 class="title contact-title">Contact</h2>
+            <h4 class="contact-status">Contact Form unavailable. Please contact me via other social available.</h4>
             <div class="section-content contact-content">
                 <h4 class="contact-subtitle">Any Questions? I will be glad to answer it?</h4>
                 
