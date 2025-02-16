@@ -1,0 +1,167 @@
+/* ====== PORTFOLIO ====== */
+.portfolio-section .title::before {
+    content: "";
+    width: var(--mb-4);
+    height: 2px;
+
+    position: absolute;
+    top: 50%;
+    background: var(--text-color);
+    left: -20%;
+}
+
+.filters {
+    margin-bottom: var(--mb-1);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter {
+    margin: var(--mb-1);
+    padding: var(--mb-1) var(--mb-2);
+
+    background: var(--text-color);
+    color: white;
+    cursor: pointer;
+    border-radius: var(--mb-1);
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: var(--normal-font);
+    transition: 0.3s;
+}
+
+.filter.active-filter {
+    background: var(--light-blue);
+    color: var(--text-color);
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio .project {
+    width: 20rem;
+    height: 18rem;
+    margin: var(--mb-1);
+
+    position: relative;
+
+    cursor: pointer;
+    box-shadow: 2px 0px 8px var(--light-blue);
+    transition: 0.3s;
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+}
+
+/* Represents the front of the div content */
+.front {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.portfolio .project:hover .front {
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.portfolio .project .front .project-name {
+    width: max-content;
+    padding: var(--mb-1);
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+
+    color: var(--text-color);
+    text-decoration: underline 1.5px;
+    transform: translate(-50%, -50%);
+}
+
+.portfolio .project .project-img {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: var(--light-blue);
+    border-radius: var(--mb-1);
+    box-shadow: 2px 0px 8px var(--light-blue);
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+/* Represents the back of the div content */
+.back {
+    background: var(--portfolio-color);
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.portfolio .project:hover .back {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.portfolio .project .back .project-name {
+    width: 100%;
+    padding: var(--mb-1);
+
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    z-index: 1;
+
+    color: var(--text-color);
+    text-decoration: underline 1.5px;
+
+    transform: translate(-50%, -50%);
+}
+
+.portfolio .project .project-description {
+    width: 100%;
+    margin: 0 var(--mb-1);
+    padding: 0 0.4rem;
+
+    position: absolute;
+    top: 15%;
+
+    font-size: var(--normal-font);
+    line-height: 2.3rem;
+}
+
+.portfolio .project .project-links {
+    width: 100%;
+
+    position: absolute;
+    bottom: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio .project .project-links img,
+.portfolio .project .project-links span {
+    width: 30px;
+    margin: 0 var(--mb-3);
+
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.portfolio .project .project-links img:hover,
+.portfolio .project .project-links span:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}

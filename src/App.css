@@ -3,6 +3,44 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+
+  /* ====== COLORS ====== */
+  --gradient-color-1: #ffecd2;
+  --gradient-color-2: #fed6e3;
+  --portfolio-color: linear-gradient(
+      to right,
+      var(--gradient-color-1),
+      var(--gradient-color-2)
+  );
+
+  --text-color: #2f4858;
+  --container-color: #745b5b;
+  --light-blue: #71c4c7;
+
+  /* ====== FONT AND TYPOGRAPHY ====== */
+  --body-font: "Poppins", sans-serif;
+  --biggest-font: 2rem;
+  --section-title-font: 1.5rem;
+  --normal-font: 1rem;
+  --small-font: 0.87rem;
+  --semi-bold: 600;
+
+  /* ====== SPACING ====== */
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+
+  --header-height: 3rem;
+
+}
+
+section {
+  /* 
+    Each section will take all the screen => 100vh
+    beginning after the header + some extra margin
+  */
+  margin-top: calc(var(--header-height) + var(--mb-1));
 }
 
 .logo {
