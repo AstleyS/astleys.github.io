@@ -1,10 +1,8 @@
 import React from 'react';
 import './About.css';
-
-import SkillCarousel from '../SkillCarousel/SkillCarousel';
+import SkillContainer from '../SkillContainer/SkillContainer';
 
 const About = () => {
-
   const logos_programming = [
     { url: 'https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white', alt: 'Java' },
     { url: 'https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black', alt: 'JavaScript' },
@@ -44,14 +42,13 @@ const About = () => {
     { url: 'https://img.shields.io/badge/GitLab%20CI/CD-FCA121?style=for-the-badge&logo=gitlab&logoColor=white', alt: 'GitLab CI/CD' },
   ];
 
-
   return (
     <>
       <section className="section about-section" id="about">
         <h2 className="title about-title">About</h2>
         <h5 className="availability-status">Currently Available</h5>
         <div className="section-content">
-        <p className="about">
+          <p className="about">
             A Master’s graduate in Computer Science with a deep appreciation for every stage of bringing an 
             idea to life, from inception to development. My ambition lies in leveraging advanced technologies to 
             tackle complex challenges with a strong interest in Software Development and Artificial Intelligence 
@@ -59,53 +56,12 @@ const About = () => {
             am eager to contribute to impactful and meaningful projects.
           </p>
 
-          <SkillCarousel title="Programming Languages" skillLogos={logos_programming} />
-          <SkillCarousel title="AI & Machine Learning" skillLogos={logos_aiml} />
-          <SkillCarousel title="Software Development" skillLogos={logos_software_dev} />
-          <SkillCarousel title="Miscellaneous" skillLogos={logos_miscellaneous} />
-
-          {/* <div className="skills-container">
-            <h5 className="skills-title">What about... my skills?</h5>
-            <div className="skills">
-              <div className="skill-level proficient">
-                <h3>Proficient</h3>
-                <ul className="skill-list">
-                  <li>Java</li>
-                  <li>Kotlin</li>
-                  <li>Python</li>
-                  <li>C</li>
-                  <li>HTML/CSS</li>
-                  <li>Git</li>
-                  <li>VS Code</li>
-                  <li>Intellij IDEA</li>
-                </ul>
-              </div>
-              <div className="skill-level more-familiar">
-                <h3>More than Familiar</h3>
-                <ul className="skill-list">
-                  <li>JavaScript</li>
-                  <li>Angular</li>
-                  <li>Django</li>
-                  <li>Android</li>
-                  <li>Flutter</li>
-                  <li>Linux</li>
-                  <li>Spring Boot</li>
-                  <li>SQL, MySQL, PostgreSQL</li>
-                </ul>
-              </div>
-              <div className="skill-level familiar">
-                <h3>Needs more Work</h3>
-                <ul className="skill-list">
-                  <li>NodeJS</li>
-                  <li>ReactJS</li>
-                  <li>C++</li>
-                  <li>PHP</li>
-                  <li>Heroku</li>
-                </ul>
-              </div>
-            </div>
-            <p className="watch-resume">Want to check my <a href="doc/resume.pdf" target="_blank">resume</a>?</p>
-          </div> */}
+          <div className="carousel-container">
+            <SkillContainer title="Programming Languages" skillLogos={logos_programming} />
+            <SkillContainer title="AI & Machine Learning" skillLogos={logos_aiml} />
+            <SkillContainer title="Software Development" skillLogos={logos_software_dev} />
+            <SkillContainer title="Miscellaneous" skillLogos={logos_miscellaneous} />
+          </div>
         </div>
       </section>
     </>
