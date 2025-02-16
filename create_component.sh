@@ -28,20 +28,12 @@ import './$COMPONENT_NAME.css';
 
 const $COMPONENT_NAME = () => {
   return (
-    <div className="$COMPONENT_NAME">
-      <h1>$COMPONENT_NAME Component</h1>
-    </div>
+    <>
+    </>
   );
 };
 
 export default $COMPONENT_NAME;
-EOL
-
-# Populate .css with basic structure
-cat <<EOL > $COMPONENT_DIR/$COMPONENT_NAME.css
-.${COMPONENT_NAME} {
-  /* Add your styles here */
-}
 EOL
 
 echo "Component $COMPONENT_NAME created successfully in $COMPONENT_DIR. Might need to refresh to see the changes"
