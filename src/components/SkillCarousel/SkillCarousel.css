@@ -1,0 +1,31 @@
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .carousel-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-logo {
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+    object-fit: contain;
+  }

@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <section className="home-section" id="home">
       <div className="home-container">
-        <img className="me-img" src="public/vite.svg" alt="Me, Myself and I" />
+        <img className="me-img" src="/vite.svg" alt="Me, Myself and I" />
         <div className="presentation">
           <h1 className="intro">
             Hello World!<br />
