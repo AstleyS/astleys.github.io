@@ -1,4 +1,5 @@
 import React from 'react';
+import './Header.css';
 
 const Header = () => {
   return (
@@ -12,12 +13,6 @@ const Header = () => {
           <li><a href="/contact" className="nav-item">Contact me!</a></li>
         </ul>
         <span className="material-icons burger">menu</span>
-        <div className="social-links">
-          <a href="https://github.com/AstleyS" target="_blank" rel="noopener noreferrer">
-            <img src="img/github.svg" alt="GitHub" />
-          </a>
-          {/* Add other social links here */}
-        </div>
       </nav>
     </header>
   );
