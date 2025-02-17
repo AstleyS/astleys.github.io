@@ -1,17 +1,20 @@
 import React from 'react';
 import './About.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFile } from '@fortawesome/free-solid-svg-icons';
+
 import SkillContainer from '../SkillContainer/SkillContainer';
+
 
 const About = () => {
   const logos_programming = [
-    { url: 'https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white', alt: 'Java' },
+    { url: 'https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white', alt: 'Java' },
     { url: 'https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black', alt: 'JavaScript' },
     { url: 'https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white', alt: 'Python' },
-    { url: 'https://img.shields.io/badge/Kotlin-0095D5?style=for-the-badge&logo=kotlin&logoColor=white', alt: 'Kotlin' },
-    { url: 'https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black', alt: 'React' },
+    { url: 'https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)', alt: 'Kotlin' },
+    { url: 'https://img.shields.io/badge/-SQL-000?&logo=MySQL&logoColor=white', alt: 'SQL' },
     { url: 'https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white', alt: 'TypeScript' },
     { url: 'https://img.shields.io/badge/C%2FC%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white', alt: 'C/C++' },
-    { url: 'https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=sql&logoColor=white', alt: 'SQL' },
   ];
 
   const logos_aiml = [
@@ -36,9 +39,11 @@ const About = () => {
   ];
 
   const logos_miscellaneous = [
+    { url: 'https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black', alt: 'Linux' },
     { url: 'https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white', alt: 'Arduino' },
     { url: 'https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white', alt: 'Docker' },
     { url: 'https://img.shields.io/badge/Ansible-2A3CFF?style=for-the-badge&logo=ansible&logoColor=white', alt: 'Ansible' },
+    { url: 'https://img.shields.io/badge/vagrant-%231563FF.svg?style=for-the-badge&logo=vagrant&logoColor=white', alt: 'Vagrant' },
     { url: 'https://img.shields.io/badge/GitLab%20CI/CD-FCA121?style=for-the-badge&logo=gitlab&logoColor=white', alt: 'GitLab CI/CD' },
   ];
 
@@ -63,6 +68,14 @@ const About = () => {
             <SkillContainer title="Miscellaneous" skillLogos={logos_miscellaneous} />
           </div>
         </div>
+
+        <div className="cv">
+          <h3>Curriculum Vitae</h3>
+          <p>Download my CV to learn more about my work experience and education.</p>
+          <button type="button">See  CV </button>
+          
+        </div>
+
       </section>
     </>
   );
