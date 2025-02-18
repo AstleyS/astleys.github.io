@@ -1,5 +1,7 @@
 import React from 'react';
 import './About.css';
+import resume from '../../assets/ENG_SDev_Astley Santos_Resume_v4.pdf';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
 
@@ -71,9 +73,8 @@ const About = () => {
 
         <div className="cv">
           <h3>Curriculum Vitae</h3>
-          <p>Download my CV to learn more about my work experience and education.</p>
-          <button type="button">See  CV </button>
-          
+          <p>Have a look on my CV to learn more about my work experience and education.</p>
+          <button type="button" onClick={() => window.open(resume, '_blank')}>See CV</button>
         </div>
 
       </section>
