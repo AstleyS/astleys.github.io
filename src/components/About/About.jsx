@@ -1,11 +1,13 @@
 import React from 'react';
 import './About.css';
 import resume from '../../assets/ENG_SDev_Astley Santos_Resume_v4.pdf';
+import {motion} from 'framer-motion';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
 
 import SkillContainer from '../SkillContainer/SkillContainer';
+import { title } from 'framer-motion/client';
 
 
 const About = () => {
@@ -49,6 +51,14 @@ const About = () => {
     { url: 'https://img.shields.io/badge/GitLab%20CI/CD-FCA121?style=for-the-badge&logo=gitlab&logoColor=white', alt: 'GitLab CI/CD' },
   ];
 
+
+  const skills = [
+    {title: 'Programming Languages', logos: logos_programming},
+    {title: 'AI & Machine Learning', logos: logos_aiml},
+    {title: 'Software Development', logos: logos_software_dev},
+    {title: 'Miscellaneous', logos: logos_miscellaneous},
+  ]
+
   return (
     <>
       <section className="section about-section" id="about">
@@ -64,14 +74,20 @@ const About = () => {
           </p>
 
           <div className="carousel-container">
-            <SkillContainer title="Programming Languages" skillLogos={logos_programming} />
-            <SkillContainer title="AI & Machine Learning" skillLogos={logos_aiml} />
-            <SkillContainer title="Software Development" skillLogos={logos_software_dev} />
-            <SkillContainer title="Miscellaneous" skillLogos={logos_miscellaneous} />
-          </div>
+            {skills.map((skill, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                >
+                  <SkillContainer title={skill.title} skillLogos={skill.logos} />
+              </motion.div>
+              ))}
+            </div>
         </div>
 
-        <div className="cv">
+        <div className="cv" style={{textAlign: 'center'}}>
           <h3>Curriculum Vitae</h3>
           <p>Have a look on my CV to learn more about my work experience and education.</p>
           <button type="button" onClick={() => window.open(resume, '_blank')}>See CV   <FontAwesomeIcon icon={faFile} />
