@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './MyPath.css';
 
@@ -41,18 +41,34 @@ const experienceData = [
 ];
 
 const MyPath = () => {
+  const [view, setView] = useState('education');
+
   return (
     <section className="myPath-section" id="myPath">
-      <h2 className="title myPath-title">My Path</h2>
+      <h2 className="title myPath-title">My Journey</h2>
+      <div className="toggle-container">
+      <button
+        onClick={() => setView('education')}
+        className={`toggle-button ${view === 'education' ? 'active' : ''}`}
+      >
+        🎓 Education
+      </button>
+      <button
+        onClick={() => setView('experience')}
+        className={`toggle-button ${view === 'experience' ? 'active' : ''}`}
+      >
+        💼 Experience
+      </button>
+      </div>
       <div className="timeline">
         <div className="timeline-container">
-          {educationData.map((item, index) => (
+          {view === 'education' && educationData.map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="timeline-item left"
+              className="timeline-item center"
             >
               <div className="content">
                 <h2>{item.title}</h2>
@@ -62,13 +78,13 @@ const MyPath = () => {
             </motion.div>
           ))}
 
-          {experienceData.map((item, index) => (
+          {view === 'experience' && experienceData.map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="timeline-item right"
+              className="timeline-item center"
             >
               <div className="content">
                 <h2>{item.title}</h2>
