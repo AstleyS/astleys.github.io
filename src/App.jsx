@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import Header from './components/Header/Header'
 import Home from './components/Home/Home'
 import About from './components/About/About'
@@ -17,6 +19,7 @@ function App() {
       <About />
       <MyPath />
       <Portfolio />
+      <Contact />
     </>
   )
 }

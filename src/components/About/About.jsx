@@ -74,7 +74,8 @@ const About = () => {
         <div className="cv">
           <h3>Curriculum Vitae</h3>
           <p>Have a look on my CV to learn more about my work experience and education.</p>
-          <button type="button" onClick={() => window.open(resume, '_blank')}>See CV</button>
+          <button type="button" onClick={() => window.open(resume, '_blank')}>See CV   <FontAwesomeIcon icon={faFile} />
+          </button>
         </div>
 
       </section>

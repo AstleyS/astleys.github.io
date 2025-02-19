@@ -1,63 +1,86 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import './MyPath.css';
 
 const educationData = [
-  { year: 'Sept.2021--Feb.2025', title: 'Master\'s in Computer Science', institution: 'University of Luxembourg' },
-  { year: 'Sept.2017--Sept.2020', title: 'Bachelor\'s in Computer Engineering', institution: 'Universidade Lusófona de Humanidades e Tecnologias' },
+  {
+    startDate: 'Sept.2021',
+    endDate: 'Feb.2025',
+    title: "Master's in Computer Science",
+    institution: 'University of Luxembourg',
+  },
+  {
+    startDate: 'Sept.2017',
+    endDate: 'Sept.2020',
+    title: "Bachelor's in Computer Engineering",
+    institution: 'Universidade Lusófona de Humanidades e Tecnologias',
+  },
 ];
 
 const experienceData = [
-  { year: '', title: '', company: '' },
-  { year: '', title: '', company: '' },
+  {
+    title: 'Mobile Developer',
+    company: 'LCSB - University of Luxembourg',
+    startDate: 'April.2023',
+    endDate: 'August.2023',
+    description: [
+      "Contributed to the foundational work and initial mobile application features for the Luxembourg Centre for Systems Biomedicine (LCSB) that not only helps Parkinson's patients monitor their condition, but also helps medical researchers perform biomedical analyses.",
+      'The application was developed for iOS (iPhone and watchOS) with Swift and for Android/Samsung (wearOS).',
+    ],
+  },
+  {
+    title: 'Teaching Assistant',
+    company: 'University of Luxembourg',
+    startDate: 'Sept.2022',
+    endDate: 'Jan.2024-01',
+    description: [
+      'Involved in the creation and automation of tests for grading programming assignments in a Web Development Bachelor’s course.',
+      'Strengthened sense of responsibility and liability, time management, communication, and software testing.',
+    ],
+  },
 ];
 
 const MyPath = () => {
-  const [activeTab, setActiveTab] = useState('education');
-
-  const handleToggle = () => {
-    setActiveTab(activeTab === 'education' ? 'experience' : 'education');
-  };
-
-  const currentData = activeTab === 'education' ? educationData : experienceData;
-
   return (
     <section className="myPath-section" id="myPath">
-      <div className="toggle-container">
-        <button
-          className={`toggle-btn ${activeTab === 'education' ? 'active' : ''}`}
-          onClick={() => setActiveTab('education')}
-        >
-          Education
-        </button>
-        <button
-          className={`toggle-btn ${activeTab === 'experience' ? 'active' : ''}`}
-          onClick={() => setActiveTab('experience')}
-        >
-          Experience
-        </button>
-      </div>
-
       <div className="timeline-container">
-        <AnimatePresence mode="wait">
-          {currentData.map((item, index) => (
-            <motion.div
-              key={item.year}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.5 }}
-              className="timeline-item"
-            >
-              <div className="circle" />
+        {educationData.map((item, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="timeline-item left"
+          >
               <div className="content">
-                <h3>{item.year}</h3>
-                <p>{item.title}</p>
-                <span>{item.institution || item.company}</span>
-              </div>
-            </motion.div>
-          ))}
-        </AnimatePresence>
+              <h2>{item.title}</h2>
+              <h5>{item.startDate} – {item.endDate}</h5>
+              <span>{item.institution}</span>
+            </div>
+          </motion.div>
+        ))}
+
+        {experienceData.map((item, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="timeline-item right"
+          >
+            <div className="content">
+              <h2>{item.title}</h2>
+              <h5>{item.startDate} – {item.endDate}</h5>
+              <span>{item.company}</span>
+              <ul>
+                {item.description.map((desc, i) => (
+                  <li key={i}>{desc}</li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
