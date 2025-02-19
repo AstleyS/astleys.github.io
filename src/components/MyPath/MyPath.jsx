@@ -32,7 +32,7 @@ const experienceData = [
     title: 'Teaching Assistant',
     company: 'University of Luxembourg',
     startDate: 'Sept.2022',
-    endDate: 'Jan.2024-01',
+    endDate: 'Jan.2024',
     description: [
       'Involved in the creation and automation of tests for grading programming assignments in a Web Development Bachelor’s course.',
       'Strengthened sense of responsibility and liability, time management, communication, and software testing.',
@@ -43,43 +43,46 @@ const experienceData = [
 const MyPath = () => {
   return (
     <section className="myPath-section" id="myPath">
-      <div className="timeline-container">
-        {educationData.map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="timeline-item left"
-          >
+      <h2 className="title myPath-title">My Path</h2>
+      <div className="timeline">
+        <div className="timeline-container">
+          {educationData.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="timeline-item left"
+            >
               <div className="content">
-              <h2>{item.title}</h2>
-              <h5>{item.startDate} – {item.endDate}</h5>
-              <span>{item.institution}</span>
-            </div>
-          </motion.div>
-        ))}
+                <h2>{item.title}</h2>
+                <h5>{item.startDate} – {item.endDate}</h5>
+                <span>{item.institution}</span>
+              </div>
+            </motion.div>
+          ))}
 
-        {experienceData.map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="timeline-item right"
-          >
-            <div className="content">
-              <h2>{item.title}</h2>
-              <h5>{item.startDate} – {item.endDate}</h5>
-              <span>{item.company}</span>
-              <ul>
-                {item.description.map((desc, i) => (
-                  <li key={i}>{desc}</li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
-        ))}
+          {experienceData.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="timeline-item right"
+            >
+              <div className="content">
+                <h2>{item.title}</h2>
+                <h5>{item.startDate} – {item.endDate}</h5>
+                <span>{item.company}</span>
+                <ul>
+                  {item.description.map((desc, i) => (
+                    <li key={i}>{desc}</li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

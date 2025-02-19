@@ -16,7 +16,8 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "framer-motion": "^12.4.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-typed": "^2.0.12"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",

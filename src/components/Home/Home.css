@@ -1,69 +1,40 @@
-/* ====== HOME ====== */
-/* Represents home container */
-.home-container {
-    height: 100%;
-    width: 100%;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.home-section {
+    display: flex;
+    justify-content: center;
     align-items: center;
-}
-
-/* Represents my image */
-.me-img {
-    min-width: 225px;
-    max-width: 75%;
-    min-height: 340px;
-    max-height: 80%;
-
-    position: relative;
-    top: -8%;
-    right: var(--mb-4);
-    align-self: center;
-    justify-self: center;
-
-    border-radius: var(--mb-4) 0 var(--mb-4) 0;
-    object-fit: cover;
-    filter: brightness(80%);
-    order: 1;
-}
-
-/* Represents my presentation text */
-.presentation {
+    overflow: hidden; /* Ensure no content overflows */
+  }
+  
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px; /* Limit width to prevent stretching */
     width: 100%;
-    margin-left: var(--mb-4);
-
-    position: relative;
-    top: -8%;
-    align-self: center;
-    justify-self: center;
-
-    font-size: var(--biggest-font);
-}
-
-.typing {
-    position: relative;
-}
-
-/* Represents the blink presented after the intro */
-.typing::after {
-    content: "";
-    height: 5%;
-    width: 1px;
-
-    position: relative;
-    right: -4px;
-
-    border-right: 4px solid white;
-    animation: blink 0.5s infinite ease;
-}
-
-/* Blink animation */
-@keyframes blink {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
+  }
+  
+  .me-img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .presentation {
+    position: relative; /* Ensure absolute children position properly */
+    overflow: hidden; /* Hide overflow during animation */
+  }
+  
+  .intro {
+    font-size: 2rem;
+    line-height: 1.5;
+    word-wrap: break-word; /* Force long words to break */
+    white-space: normal; /* Ensure wrapping */
+  }
+  
+  .typing {
+    max-width: 100%; /* Keep within the container */
+    overflow: hidden;
+    word-break: break-word; /* Ensure long words wrap */
+  }
+  
