@@ -7,8 +7,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
 
 import SkillContainer from '../SkillContainer/SkillContainer';
-import { title } from 'framer-motion/client';
-
 
 const About = () => {
   const logos_programming = [
