@@ -20,7 +20,8 @@ const projects = [
     technologies: ['java', 'spring'],
     image: springbootImg,
     gif: springbootGif,
-    link: '#'
+    website: '#', 
+    github: 'https://github.com/AstleyS'
   },
   {
     id: 2,
@@ -28,7 +29,8 @@ const projects = [
     technologies: ['react', 'spring'],
     image: reactDashboardImg,
     gif: reactDashboardGif,
-    link: '#'
+    website: '#', 
+    github: 'https://github.com/AstleyS'
   },
   {
     id: 3,
@@ -36,7 +38,8 @@ const projects = [
     technologies: ['java'],
     image: javaCliImg,
     gif: javaCliGif,
-    link: '#'
+    website: '#', 
+    github: 'https://github.com/AstleyS'
   },
 ];
 
@@ -111,13 +114,7 @@ const Portfolio = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <img
-                  src={hoveredProject === project.id ? project.gif : project.image}
-                  alt={project.title}
-                />
-                <h3>{project.title}</h3>
-              </a>
+              <Project project={project} hoveredProject={hoveredProject} />
             </motion.div>
           ))}
         </div>
