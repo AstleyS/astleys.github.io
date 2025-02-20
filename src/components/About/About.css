@@ -18,6 +18,10 @@
     left: -30%;
 }
 
+.about-title {
+    margin-top: 5rem;
+}
+
 /* Represents the subtitle of the about section */
 .availability-status {
     margin-top: 0.25rem;
@@ -26,6 +30,16 @@
     text-decoration: underline overline wavy;
     color: rgb(107, 153, 107);
     font-size: var(--small-font);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.availability-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
 }
 
 .about {

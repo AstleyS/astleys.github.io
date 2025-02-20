@@ -58,6 +58,7 @@ const Portfolio = () => {
     ? projects
     : projects.filter((project) => project.technologies.includes(activeTab));
 
+  /*
   // Slide navigation
   const scrollLeft = () => {
     sliderRef.current.scrollBy({ left: -350, behavior: 'smooth' });
@@ -66,6 +67,7 @@ const Portfolio = () => {
   const scrollRight = () => {
     sliderRef.current.scrollBy({ left: 350, behavior: 'smooth' });
   };
+  */
 
   return (
     <section className="portfolio-section" id="portfolio">
@@ -91,6 +93,10 @@ const Portfolio = () => {
       </div>
 
       <div className="slider-wrapper">
+        {/* Left Arrow 
+        <button className="arrow left-arrow" onClick={scrollLeft}>&#8592;</button>
+        */}
+
         {/* Project Showcase */}
         <div className="projects-container" ref={sliderRef}>
           {filteredProjects.map((project) => (
@@ -113,6 +119,10 @@ const Portfolio = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Right Arrow 
+        <button className="arrow right-arrow" onClick={scrollRight}>&#8594;</button>
+        */}
       </div>
     </section>
   );

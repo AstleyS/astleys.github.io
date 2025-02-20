@@ -49,7 +49,6 @@ const About = () => {
     { url: 'https://img.shields.io/badge/GitLab%20CI/CD-FCA121?style=for-the-badge&logo=gitlab&logoColor=white', alt: 'GitLab CI/CD' },
   ];
 
-
   const skills = [
     {title: 'Programming Languages', logos: logos_programming},
     {title: 'AI & Machine Learning', logos: logos_aiml},
@@ -59,10 +58,9 @@ const About = () => {
 
   return (
     <>
-      <section className="section about-section" id="about">
-        <h2 className="title about-title">About</h2>
-        <h5 className="availability-status">Currently Available</h5>
-        <div className="section-content">
+      <section className="about-section" id="about">
+        <h2 className="about-title">About</h2>
+        <div className="section-container">
           <p className="about">
             A Master’s graduate in Computer Science with a deep appreciation for every stage of bringing an 
             idea to life, from inception to development. My ambition lies in leveraging advanced technologies to 
