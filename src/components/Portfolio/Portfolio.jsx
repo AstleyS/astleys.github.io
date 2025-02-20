@@ -2,6 +2,8 @@ import React, { useState, useRef } from 'react';
 import './Portfolio.css';
 import { motion } from 'framer-motion';
 
+import Project from '../Project/Project'
+
 // Importing images correctly
 import springbootGif from '../../assets/project_gif.gif';
 import reactDashboardGif from '../../assets/project_gif.gif';
