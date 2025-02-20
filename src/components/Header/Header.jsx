@@ -5,6 +5,7 @@ import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -22,6 +23,17 @@ const Header = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Smooth scrolling and set active section
+  const handleLinkClick = (e, targetId) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+      setActiveSection(targetId);
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
     <header>
       <nav className="nav">
@@ -29,10 +41,10 @@ const Header = () => {
 
         {/* Navigation Links (Hidden on small screens) */}
         <ul className={`nav-links ${isMenuOpen ? 'menu-active' : ''}`}>
-          <li><a href="/" className="nav-item active-link">Home</a></li>
-          <li><a href="#about" className="nav-item">About</a></li>
-          <li><a href="#portfolio" className="nav-item">Portfolio</a></li>
-          <li><a href="#contact" className="nav-item">Contact me!</a></li>
+          <li><a href="/" className={`nav-item ${activeSection === 'home' ? 'active-link' : ''}`} onClick={(e) => handleLinkClick(e, 'home')}>Home</a></li>
+          <li><a href="#about" className={`nav-item ${activeSection === 'about' ? 'active-link' : ''}`} onClick={(e) => handleLinkClick(e, 'about')}>About</a></li>
+          <li><a href="#portfolio" className={`nav-item ${activeSection === 'portfolio' ? 'active-link' : ''}`} onClick={(e) => handleLinkClick(e, 'portfolio')}>Portfolio</a></li>
+          <li><a href="#contact" className={`nav-item ${activeSection === 'contact' ? 'active-link' : ''}`} onClick={(e) => handleLinkClick(e, 'contact')}>Contact me!</a></li>
         </ul>
 
         {/* Menu Icon (Visible only on small screens) */}
@@ -46,10 +58,10 @@ const Header = () => {
         {isMenuOpen && (
           <div className="overlay-menu">
             <ul className="overlay-links">
-              <li><a href="/" onClick={toggleMenu}>Home</a></li>
-              <li><a href="#about" onClick={toggleMenu}>About</a></li>
-              <li><a href="#portfolio" onClick={toggleMenu}>Portfolio</a></li>
-              <li><a href="#contact" onClick={toggleMenu}>Contact me!</a></li>
+              <li><a href="/" className={activeSection === 'home' ? 'active-link' : ''} onClick={(e) => handleLinkClick(e, 'home')}>Home</a></li>
+              <li><a href="#about" className={activeSection === 'about' ? 'active-link' : ''} onClick={(e) => handleLinkClick(e, 'about')}>About</a></li>
+              <li><a href="#portfolio" className={activeSection === 'portfolio' ? 'active-link' : ''} onClick={(e) => handleLinkClick(e, 'portfolio')}>Portfolio</a></li>
+              <li><a href="#contact" className={activeSection === 'contact' ? 'active-link' : ''} onClick={(e) => handleLinkClick(e, 'contact')}>Contact me!</a></li>
             </ul>
           </div>
         )}

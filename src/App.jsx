@@ -13,10 +13,11 @@ import Contact from './components/Contact/Contact'
 
 function App() {
   
-  const components = [<Header />, <Home />, <About />, <MyPath />, <Portfolio />, <Contact />]
+  const components = [<Home />, <About />, <MyPath />, <Portfolio />, <Contact />]
 
   return (
     <>
+    <Header />, 
       {components.map((component, index) => (
         <motion.div
           key={index}
