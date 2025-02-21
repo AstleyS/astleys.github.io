@@ -10,14 +10,11 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 600px; /* Limit width to prevent stretching */
     width: 100%;
   }
   
   .me-img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 1rem;
+    width: 250px;
   }
   
   .presentation {

@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
+
+import me from '../../assets/me.jpg';
+
 import './Home.css';
 
 const phrases = ['am a Software Developer', 'am a Machine Learning enthusiast', 'transform ideas into reality with technology'];
@@ -32,7 +35,7 @@ const Home = () => {
   return (
     <section className="home-section" id="home">
       <div className="home-container">
-        <img className="me-img" src="/vite.svg" alt="Me, Myself and I" />
+        <img className="me-img" src={me} alt="Me, Myself and I" />
         <div className="presentation">
           <h1 className="intro">
             Hello World!<br />
