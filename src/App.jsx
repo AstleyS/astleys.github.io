@@ -13,7 +13,7 @@ import Contact from './components/Contact/Contact'
 
 function App() {
   
-  const components = [<Home />, <About />, <MyPath />, <Portfolio />, <Contact />]
+  const components = [<Home />, <About />, <Portfolio />, <Contact />]
 
   return (
     <>

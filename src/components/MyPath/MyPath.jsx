@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './MyPath.css';
 
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFile } from '@fortawesome/free-solid-svg-icons';
+import resume from '../../assets/ENG_SDev_Astley Santos_Resume_v4.pdf';
+
 const educationData = [
   {
     startDate: 'Sept.2021',
@@ -99,10 +104,15 @@ const MyPath = () => {
             </motion.div>
           ))}
         </div>
-
-          
-
       </div>
+      <div className="cv">
+          <h3>Curriculum Vitae</h3>
+          <p>Have a look on my CV to learn more about my work experience and education.</p>
+          <button type="button" onClick={() => window.open(resume, '_blank')}>See CV
+               <FontAwesomeIcon icon={faFile} />
+          </button>
+        </div>
+
     </section>
   );
 };
