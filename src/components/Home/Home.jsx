@@ -44,7 +44,9 @@ const Home = () => {
       </div>
       <div className='presentation'>
         <h1>
-          Astley Santos
+          Hi World!
+          <br />
+          I am Astley Santos
         </h1>
         <h2 style={{  background: 'linear-gradient(90deg, var(--primary-color), var(--secondary-color))',  WebkitBackgroundClip: 'text',  WebkitTextFillColor: 'transparent',  fontSize: '2rem',  fontWeight: 'bold',  margin: '0 0 10px 0' }}>
           Software Engineer
@@ -58,8 +60,7 @@ const Home = () => {
           </a>
         </span>
         <p className='intro'>
-            Hello World!<br />
-            I am Astley. I transform ideas into reality with technology
+        Turning ideas into reality through technology, constantly learning and growing along the way.
         </p>
       </div>
     </section>

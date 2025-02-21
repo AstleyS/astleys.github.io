@@ -18,7 +18,27 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  font-size: var(--mb-3);
 }
+
+@media (max-width: 480px) {
+  .me-img {
+    width: 200px;
+  }
+  
+  .presentation h1 {
+    font-size: 1.5rem; /* Smaller font size for extra small screens */
+  }
+}
+@media (max-width: 768px) {
+  .me-img {
+    width: 250px;
+  }
+  .presentation h1 {
+    font-size: 2rem; /* Smaller font size for small screens */
+  }
+}
+
 
 @media (width >= 800px) {
   .home-section {
