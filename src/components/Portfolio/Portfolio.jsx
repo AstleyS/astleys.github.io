@@ -2,46 +2,8 @@ import React, { useState, useRef } from 'react';
 import './Portfolio.css';
 import { motion } from 'framer-motion';
 
-import Project from '../Project/Project'
-
-// Importing images correctly
-import springbootGif from '../../assets/project_gif.gif';
-import reactDashboardGif from '../../assets/project_gif.gif';
-import javaCliGif from '../../assets/project_gif.gif';
-
-import springbootImg from '../../assets/project_img.png';
-import reactDashboardImg from '../../assets/project_img.png';
-import javaCliImg from '../../assets/project_img.png';
-
-const projects = [
-  {
-    id: 1,
-    title: 'Path Finder Visualiser',
-    technologies: ['react'],
-    image: springbootImg,
-    gif: springbootGif,
-    website: 'https://astleys.github.io/web-pathfinder-visualizer',
-    github: 'https://github.com/AstleyS/web-pathfinder-visualizer'
-  },
-  {
-    id: 2,
-    title: 'Flask Todo List',
-    technologies: ['python'],
-    image: reactDashboardImg,
-    gif: reactDashboardGif,
-    website: null, 
-    github: 'https://github.com/AstleyS/web-flask-todolist'
-  },
-  {
-    id: 3,
-    title: 'Java CLI Tool',
-    technologies: ['java'],
-    image: javaCliImg,
-    gif: javaCliGif,
-    website: '#', 
-    github: 'https://github.com/AstleyS'
-  },
-];
+import Project from '../Project/Project';
+import projects from '../../data/projects';
 
 // Extract unique technology tabs
 const getUniqueTechnologies = (projects) => {
@@ -62,17 +24,6 @@ const Portfolio = () => {
   const filteredProjects = activeTab === 'all'
     ? projects
     : projects.filter((project) => project.technologies.includes(activeTab));
-
-  /*
-  // Slide navigation
-  const scrollLeft = () => {
-    sliderRef.current.scrollBy({ left: -350, behavior: 'smooth' });
-  };
-
-  const scrollRight = () => {
-    sliderRef.current.scrollBy({ left: 350, behavior: 'smooth' });
-  };
-  */
 
   return (
     <section className="portfolio-section" id="portfolio">
@@ -107,9 +58,9 @@ const Portfolio = () => {
           {filteredProjects.map((project) => (
             <motion.div
               key={project.id}
-              className="project-card"
-              onMouseEnter={() => setHoveredProject(project.id)}
-              onMouseLeave={() => setHoveredProject(null)}
+              className={`project-card ${!project.available ? 'disabled' : ''}`}
+              onMouseEnter={() => project.available && setHoveredProject(project.id)}
+              onMouseLeave={() => project.available && setHoveredProject(null)}
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}

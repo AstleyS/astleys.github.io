@@ -37,6 +37,16 @@
   display: none; /* Hide scrollbar for Chrome, Safari */
 }
 
+.project-card {
+  margin-right: 15px;
+}
+
+.project-card.disabled {
+  pointer-events: none; /* Disable interactions */
+  opacity: 0.5; /* Make it look disabled */
+  filter: grayscale(100%); /* Optional: make it grayscale */
+}
+
 .toggle-button.active {
   background-color: var(--secondary-color);
   color: white;

@@ -8,7 +8,7 @@ const Project = ({ project, hoveredProject }) => {
   return (
     <div className="project-card">
       <img
-        src={hoveredProject === project.id ? project.gif : project.image}
+        src={project.image}
         alt={project.title}
       />
       <h3>{project.title}</h3>
