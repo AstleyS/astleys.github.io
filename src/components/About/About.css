@@ -43,7 +43,8 @@
 }
 
 .about {
-    font-size: var(--normal-font);
+    font-weight: var(--semi-bold); /* Make it bolder */
+    line-height: 2;
 }
 
 .about .job-positions {

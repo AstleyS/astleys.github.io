@@ -1,38 +1,80 @@
+/* General Styles */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
 
-  /* ====== COLORS ====== */
-  --gradient-color-1: #ffecd2;
-  --gradient-color-2: #fed6e3;
-  --portfolio-color: linear-gradient(
-      to right,
-      var(--gradient-color-1),
-      var(--gradient-color-2)
-  );
+body {
+  font-family: var(--body-font);
+  background: var(--portfolio-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
 
-  --text-color: #2f4858;
-  --container-color: #745b5b;
-  --light-blue: #71c4c7;
+/* Represents each section title */
+.title {
+  width: max-content;
 
-  /* ====== FONT AND TYPOGRAPHY ====== */
-  --body-font: "Poppins", sans-serif;
-  --biggest-font: 2rem;
-  --section-title-font: 1.5rem;
-  --normal-font: 1rem;
-  --small-font: 0.87rem;
-  --semi-bold: 600;
+  position: relative;
+  left: 50%;
 
-  /* ====== SPACING ====== */
-  --mb-1: 0.5rem;
-  --mb-2: 1rem;
-  --mb-3: 1.5rem;
-  --mb-4: 2rem;
+  transform: translateX(-50%);
+  font-size: var(--section-title-font);
+  letter-spacing: var(--mb-1);
+  text-transform: uppercase;
+  color: var(--primary-color);
 
-  --header-height: 3rem;
+}
 
+.title::before {
+  content: "";
+  width: var(--mb-4);
+  height: 2px;
+
+  position: absolute;
+  top: 50%;
+  left: -15%;
+
+  background: var(--text-color);
+}
+
+.title::after {
+  content: "";
+  width: var(--mb-4);
+  height: 2px;
+
+  position: absolute;
+  top: 50%;
+
+  background: var(--text-color);
+}
+
+/* Media Queries for Responsive Title */
+@media (max-width: 1200px) {
+  .title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 1.2rem;
+  }
 }
 
 section {
@@ -53,7 +95,7 @@ section {
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em var(--primary-color));
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
@@ -74,10 +116,24 @@ section {
   }
 }
 
-.card {
-  padding: 2em;
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0 10px;
 }
 
-.read-the-docs {
-  color: #888;
+button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+button.active {
+  background-color: #4A90E2;
+  color: white;
 }

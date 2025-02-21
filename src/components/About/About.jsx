@@ -59,7 +59,7 @@ const About = () => {
   return (
     <>
       <section className="about-section" id="about">
-        <h2 className="about-title">About</h2>
+        <h2 className="title about-title">About</h2>
         <div className="section-container">
           <p className="about">
             A Master’s graduate in Computer Science with a deep appreciation for every stage of bringing an 

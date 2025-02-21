@@ -5,12 +5,49 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #f5f5f5; /* Light Gray */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* ====== COLORS ====== */
+  --gradient-color-1: #f5f5f5; /* Light Gray */
+  --gradient-color-2: #e0e0e0; /* Slightly darker Light Gray */
+  --portfolio-color: linear-gradient(
+      to right,
+      var(--gradient-color-1),
+      var(--gradient-color-2)
+  );
+
+  --text-color: #333333; /* Dark Gray for better readability */
+  --container-color: #ffffff; /* White for contrast */
+  --light-blue: #a0c4ff; /* Softer, modern light blue */
+  --primary-color: #ff6f61; /* Coral */
+  --secondary-color: #4a90e2; /* Light Blue */
+  --background-color: #f5f5f5; /* Light Gray */
+  --header-background: #ffffff; /* White */
+  --header-shadow: rgba(0, 0, 0, 0.1); /* Stronger shadow for highlighting */
+  --title-background-color: #f0f0f0; /* Light Gray for title background */
+
+  /* ====== FONT AND TYPOGRAPHY ====== */
+  --body-font: "Poppins", sans-serif;
+  --biggest-font: 2.5rem; /* Increased for more impact */
+  --section-title-font: 2rem;
+  --normal-font: 1.2rem;
+  --small-font: 0.87rem;
+  --semi-bold: 600;
+  --bold: 700; /* Added bold weight */
+  --light: 300; /* Added light weight */
+
+  /* ====== SPACING ====== */
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+
+  --header-height: 3rem;
 }
 
 a {
@@ -70,11 +107,12 @@ button:focus-visible {
 
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--body-font);
-    color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--body-font);
+  color: var(--text-color);
+
 }
 
 html {

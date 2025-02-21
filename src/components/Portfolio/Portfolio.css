@@ -11,15 +11,6 @@
   margin: 0 10px;
 }
 
-.tabs button:hover {
-  background-color: #4A90E2;
-  color: white;
-}
-
-.tabs button.active {
-  background-color: #4A90E2;
-  color: white;
-}
 
 .slider-wrapper {
   position: relative;
