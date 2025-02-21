@@ -14,9 +14,11 @@ const Project = ({ project, hoveredProject }) => {
       <h3>{project.title}</h3>
       {hoveredProject === project.id && (
         <div className="project-links">
+          {project.website && (
           <a href={project.website} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon style={{marginRight: '10px'}} icon={faGlobe} />
           </a>
+          )}
           {project.github && (
             <a href={project.github} target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faGithub} />

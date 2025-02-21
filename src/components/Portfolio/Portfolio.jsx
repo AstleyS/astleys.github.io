@@ -16,21 +16,21 @@ import javaCliImg from '../../assets/project_img.png';
 const projects = [
   {
     id: 1,
-    title: 'Spring Boot API',
-    technologies: ['java', 'spring'],
+    title: 'Path Finder Visualiser',
+    technologies: ['react'],
     image: springbootImg,
     gif: springbootGif,
-    website: '#', 
-    github: 'https://github.com/AstleyS'
+    website: 'https://astleys.github.io/web-pathfinder-visualizer',
+    github: 'https://github.com/AstleyS/web-pathfinder-visualizer'
   },
   {
     id: 2,
-    title: 'React Dashboard',
-    technologies: ['react', 'spring'],
+    title: 'Flask Todo List',
+    technologies: ['python'],
     image: reactDashboardImg,
     gif: reactDashboardGif,
-    website: '#', 
-    github: 'https://github.com/AstleyS'
+    website: null, 
+    github: 'https://github.com/AstleyS/web-flask-todolist'
   },
   {
     id: 3,
