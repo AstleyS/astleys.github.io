@@ -128,13 +128,12 @@
     font-size: var(--normal-font);
 }
 
-.watch-resume {
+.cv {
     text-align: center;
-    font-size: var(--normal-font);
-}
-
-.watch-resume a {
-    text-decoration: underline wavy;
-    font-weight: var(--semi-bold);
-    letter-spacing: 1px;
-}
+    border: 2px solid var(--primary-color); /* Add border */
+    padding: 20px; /* Add padding for spacing */
+    margin: 0 auto; /* Center the div */
+    max-width: 600px; /* Set a max width */
+    border-radius: 10px ; /* Add border radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for more personality */
+  }
