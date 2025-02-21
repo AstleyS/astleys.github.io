@@ -92,10 +92,5 @@ h1 {
   box-sizing: border-box;
   font-family: var(--body-font);
   color: var(--text-color);
-
-}
-
-html {
-    scroll-behavior: smooth;
-    background-image: var(--portfolio-color);
+  scroll-behavior: smooth;
 }

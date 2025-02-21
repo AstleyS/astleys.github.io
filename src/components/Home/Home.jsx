@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 import me from '../../assets/me.jpg';
 
@@ -33,20 +34,40 @@ const Home = () => {
   }, [index]);
 
   return (
-    <section className="home-section" id="home">
+    <section id="home" className="home-section">
       <div className="home-container">
-        <img className="me-img" src={me} alt="Me, Myself and I" />
-        <div className="presentation">
-          <h1 className="intro">
+        <img
+          src={me}
+          className="me-img"
+          alt="Profile picture of Astley Santos"
+        />
+      </div>
+      <div className='presentation'>
+        <h1>
+          Astley Santos
+        </h1>
+        <h2 style={{  background: 'linear-gradient(90deg, var(--primary-color), var(--secondary-color))',  WebkitBackgroundClip: 'text',  WebkitTextFillColor: 'transparent',  fontSize: '2rem',  fontWeight: 'bold',  margin: '0 0 10px 0' }}>
+          Software Engineer
+        </h2>
+        <span>
+          <a style={{ marginRight:'10px' }} href="https://github.com/AstleyS" target="_blank">
+            <FontAwesomeIcon style={{fontSize: '1.5rem'}} icon={faGithub} />
+          </a>
+          <a href="https://linkedin.com/in/astley-santos" target="_blank">
+            <FontAwesomeIcon style={{fontSize: '1.5rem'}} icon={faLinkedin} />
+          </a>
+        </span>
+        <p className='intro'>
             Hello World!<br />
-            I am Astley.<br />
-            I <span className="typing">{currentPhrase}</span>
-          </h1>
-          <FontAwesomeIcon icon={faLaptopCode} size="2x" />
-        </div>
+            I am Astley. I transform ideas into reality with technology
+        </p>
       </div>
     </section>
   );
+
+  
 };
 
 export default Home;
+
+

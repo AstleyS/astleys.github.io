@@ -50,7 +50,7 @@
   
   .submit-btn {
     padding: 12px 20px;
-    background-color: #007bff;
+    background-color: var(--secondary-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -87,3 +87,9 @@
     transform: scale(1.1);
   }
   
+/* Add styles for the form status message */
+.form-status {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: green; /* Use the primary color for the status message */
+}
