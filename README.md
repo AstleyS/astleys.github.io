@@ -1,8 +1,25 @@
-# React + Vite
+# Astley Santos' Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the source code for Astley Santos' personal portfolio website, built with React and Vite. The website showcases projects, skills, and achievements.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: A JavaScript library for building user interfaces.
+- **Vite**: A build tool that provides a fast development environment.
+
+## Getting Started
+
+To get started with the project, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/AstleyS/astleys.github.io.git
+   cd astleys.github.io
+
+2. **Install Dependencies**:
+   ```bash
+   npm install
+
+3. **Run the project**:
+   ```bash
+   npm run dev

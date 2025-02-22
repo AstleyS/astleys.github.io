@@ -28,6 +28,9 @@ function App() {
           {component}
         </motion.div>
       ))}
+      <footer className="footer">
+        <p>&copy; {new Date().getFullYear()} Astley Santos. All rights reserved.</p>
+      </footer>
     </>
   )
 }
