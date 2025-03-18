@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
+import './Project.css'
+
 const Project = ({ project, hoveredProject, selectedProject, onSelect }) => {
   // Show description if either hovered or selected
   const showDescription = hoveredProject === project.id || selectedProject === project.id;
@@ -19,31 +21,31 @@ const Project = ({ project, hoveredProject, selectedProject, onSelect }) => {
           src={project.image}
           alt={project.title}
         />
-        <h3>{project.title}</h3>
-        <div className="project-links">
-          {project.website && (
-          <a 
-            href={project.website} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <FontAwesomeIcon style={{marginRight: '10px'}} icon={faGlobe} />
-          </a>
-          )}
-          {project.github && (
+      </div>
+      <h3 className="project-title">{project.title}</h3>
+      <div className="project-links">
+            {project.website && (
             <a 
-              href={project.github} 
+              href={project.website} 
               target="_blank" 
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
             >
-              <FontAwesomeIcon icon={faGithub} />
+              <FontAwesomeIcon icon={faGlobe} />
             </a>
-          )}
-        </div>
+            )}
+            {project.github && (
+              <a 
+                href={project.github} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+            )}
       </div>
-      
+
       {showDescription && (
         <div className="project-description">
           <p>{project.description}</p>
