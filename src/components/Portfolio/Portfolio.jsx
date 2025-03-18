@@ -17,6 +17,7 @@ const getUniqueTechnologies = (projects) => {
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState('all');
   const [hoveredProject, setHoveredProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(null);
   const sliderRef = useRef(null);
 
   const technologies = getUniqueTechnologies(projects);
@@ -24,6 +25,14 @@ const Portfolio = () => {
   const filteredProjects = activeTab === 'all'
     ? projects
     : projects.filter((project) => project.technologies.includes(activeTab));
+
+  const handleProjectSelect = (projectId, isHover = false) => {
+    if (isHover) {
+      setHoveredProject(projectId);
+    } else {
+      setSelectedProject(projectId);
+    }
+  };
 
   return (
     <section className="portfolio-section" id="portfolio">
@@ -49,30 +58,25 @@ const Portfolio = () => {
       </div>
 
       <div className="slider-wrapper">
-        {/* Left Arrow 
-        <button className="arrow left-arrow" onClick={scrollLeft}>&#8592;</button>
-        */}
-
         {/* Project Showcase */}
         <div className="projects-container" ref={sliderRef}>
           {filteredProjects.map((project) => (
             <motion.div
               key={project.id}
               className={`project-card ${!project.available ? 'disabled' : ''}`}
-              onMouseEnter={() => project.available && setHoveredProject(project.id)}
-              onMouseLeave={() => project.available && setHoveredProject(null)}
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <Project project={project} hoveredProject={hoveredProject} />
+              <Project 
+                project={project} 
+                hoveredProject={hoveredProject} 
+                selectedProject={selectedProject}
+                onSelect={handleProjectSelect}
+              />
             </motion.div>
           ))}
         </div>
-
-        {/* Right Arrow 
-        <button className="arrow right-arrow" onClick={scrollRight}>&#8594;</button>
-        */}
       </div>
     </section>
   );

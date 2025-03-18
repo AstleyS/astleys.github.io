@@ -4,8 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #f5f5f5; /* Light Gray */
+  color: rgb(255, 255, 255);
+  background-color: rgb(245, 245, 245); /* Light Gray */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,11 +15,7 @@
   /* ====== COLORS ====== */
   --gradient-color-1: #f5f5f5; /* Light Gray */
   --gradient-color-2: #e0e0e0; /* Slightly darker Light Gray */
-  --portfolio-color: linear-gradient(
-      to right,
-      var(--gradient-color-1),
-      var(--gradient-color-2)
-  );
+  --portfolio-color: #ffffff;
 
   --text-color: #333333; /* Dark Gray for better readability */
   --container-color: #ffffff; /* White for contrast */

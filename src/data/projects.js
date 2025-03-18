@@ -55,6 +55,7 @@ const projects = [
     description: 'A React-based visualization tool that demonstrates pathfinding algorithms like A* and Dijkstra, helping users understand how different algorithms navigate through a grid.',
     available: false
   },
+  /*
   {
     id: 5,
     title: 'Violin Posture Correction',
@@ -77,8 +78,9 @@ const projects = [
     description: 'A simple and interactive Todo List application developed with Angular, allowing users to efficiently create, update, and delete tasks while maintaining a structured UI.',
     available: false
   },
+  */
   {
-    id: 7,
+    id: 5,
     title: 'Inventory Management System',
     technologies: ['spring boot', 'angular'],
     image: upcomingImg,
@@ -86,6 +88,28 @@ const projects = [
     website: '#',
     github: 'https://github.com/AstleyS/inventory-management',
     description: 'A robust inventory management system built using Spring Boot (backend) and Angular (frontend), providing features for tracking products, managing stock levels, and generating reports.',
+    available: false
+  },
+  {
+    id: 6,
+    title: 'Gym Workout Classification',
+    technologies: ['AI/ML', 'python'],
+    image: upcomingImg,
+    gif: projectGif,
+    website: '#',
+    github: 'https://github.com/AstleyS/gym-workout-classification',
+    description: 'An AI/ML project to classify different gym workouts.',
+    available: false
+  },
+  {
+    id: 7,
+    title: 'Trends Sentiment Analysis',
+    technologies: ['AI/ML', 'python'],
+    image: upcomingImg,
+    gif: projectGif,
+    website: '#',
+    github: 'https://github.com/AstleyS/trend-sentiment-analysis',
+    description: ' ',
     available: false
   },
 ];
