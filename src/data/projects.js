@@ -5,7 +5,7 @@ import upcomingImg from '../assets/upcoming_project.png';
 import flaskTodoList from '../assets/flask_todolist.png';
 //import vanillaJsPortfolio from '../assets/vanilla_js_portfolio.png';
 import reactPortfolio from '../assets/react_portfolio.png';
-// import pathfinderVisualizer from '../assets/pathfinder_visualizer.png';
+import pathfinderVisualizer from '../assets/pathfinder_visualizer.png';
 // import violinPosture from '../assets/violin_posture.png';
 // import angularTodoList from '../assets/angular_todolist.png';
 // import inventoryManagement from '../assets/inventory_management.png';
@@ -44,12 +44,12 @@ const projects = [
   {
     title: 'Pathfinder Algorithm Visualizer',
     technologies: ['react'],
-    image: upcomingImg,
+    image: pathfinderVisualizer,
     gif: projectGif,
     website: 'https://astleys.github.io/web-pathfinder-visualizer',
     github: 'https://github.com/AstleyS/web-pathfinder-visualizer',
     description: 'A React-based visualization tool that demonstrates pathfinding algorithms like A* and Dijkstra, helping users understand how different algorithms navigate through a grid.',
-    available: false
+    available: true
   },
   /*
   {
@@ -74,6 +74,17 @@ const projects = [
   },
   */
   {
+    title: 'MNIST Sketch Recognition',
+    technologies: ['AI/ML', 'python'],
+    image: upcomingImg,
+    gif: projectGif,
+    website: '#',
+    github: 'https://github.com/AstleyS/mnist-scketch-recognition',
+    description: 'An interactive web app that lets users draw digits and instantly visualizes the live probabilities of what digit the model predicts, showing confidence levels for each digit from 0–9.',
+    available: false
+  },
+
+  {
     title: 'University Management System',
     technologies: ['spring boot', 'angular'],
     image: upcomingImg,
@@ -93,6 +104,8 @@ const projects = [
     description: 'An AI/ML project to classify different gym workouts.',
     available: false
   },
+
+  /*
   {
     title: 'Trends Sentiment Analysis',
     technologies: ['AI/ML', 'python'],
@@ -103,6 +116,7 @@ const projects = [
     description: ' ',
     available: false
   },
+  */
 ];
 
 const indexedProjects = projects.map((project, index) => ({
