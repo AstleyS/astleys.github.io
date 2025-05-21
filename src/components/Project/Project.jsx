@@ -10,7 +10,7 @@ const Project = ({ project, hoveredProject, selectedProject, onSelect }) => {
   const showDescription = hoveredProject === project.id || selectedProject === project.id;
   
   return (
-    <div className="project-card">
+    <>
       <div 
         className="project-image-container"
         onClick={() => onSelect(selectedProject === project.id ? null : project.id)}
@@ -51,7 +51,7 @@ const Project = ({ project, hoveredProject, selectedProject, onSelect }) => {
           <p>{project.description}</p>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

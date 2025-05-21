@@ -12,7 +12,6 @@ import reactPortfolio from '../assets/react_portfolio.png';
 
 const projects = [
   {
-    id: 1,
     title: 'Flask Todo List',
     technologies: ['Python', 'Flask'],
     image: flaskTodoList,
@@ -23,29 +22,26 @@ const projects = [
     available: true
   },
   {
-    id: 2,
     title: 'Vanilla JS Portfolio Website',
     technologies: ['vanilla JS'],
     image: projectImg,
     gif: projectGif,
-    website: '#',
-    github: 'https://github.com/AstleyS/astleys.github.io',
+    website: '',
+    github: 'https://github.com/AstleyS/astleys.github.io/tree/vanillaJS',
     description: 'This is Astley\'s personal web portfolio, designed and developed using only HTML, CSS, and JavaScript to showcase projects, skills, and achievements.',
     available: true
 },
   {
-    id: 3,
     title: 'React Portfolio Website',
     technologies: ['react'],
     image: reactPortfolio,
     gif: projectGif,
-    website: '#',
+    website: '',
     github: 'https://github.com/AstleyS/astleys.github.io',
     description: 'Astley\'s personal portfolio website, redesigned using React.js for improved modularity, performance, and user experience.',
     available: true
   },
   {
-    id: 4,
     title: 'Pathfinder Algorithm Visualizer',
     technologies: ['react'],
     image: upcomingImg,
@@ -57,7 +53,6 @@ const projects = [
   },
   /*
   {
-    id: 5,
     title: 'Violin Posture Correction',
     technologies: ['Python', 'AI/ML'],
     image: upcomingImg,
@@ -68,7 +63,6 @@ const projects = [
     available: false
   },
   {
-    id: 6,
     title: 'Angular Todo List Application',
     technologies: ['angular'],
     image: upcomingImg,
@@ -80,18 +74,16 @@ const projects = [
   },
   */
   {
-    id: 5,
-    title: 'Inventory Management System',
+    title: 'University Management System',
     technologies: ['spring boot', 'angular'],
     image: upcomingImg,
     gif: projectGif,
-    website: '#',
-    github: 'https://github.com/AstleyS/inventory-management',
-    description: 'A robust inventory management system built using Spring Boot (backend) and Angular (frontend), providing features for tracking products, managing stock levels, and generating reports.',
+    website: '',
+    github: 'https://github.com/AstleyS/school-system-frontend',
+    description: 'The University Management System is a full-stack web application designed to streamline and digitize the academic workflows of an educational institution.',
     available: false
   },
   {
-    id: 6,
     title: 'Gym Workout Classification',
     technologies: ['AI/ML', 'python'],
     image: upcomingImg,
@@ -102,7 +94,6 @@ const projects = [
     available: false
   },
   {
-    id: 7,
     title: 'Trends Sentiment Analysis',
     technologies: ['AI/ML', 'python'],
     image: upcomingImg,
@@ -114,4 +105,9 @@ const projects = [
   },
 ];
 
-export default projects;
+const indexedProjects = projects.map((project, index) => ({
+  id: index + 1,
+  ...project
+}));
+
+export default indexedProjects;
