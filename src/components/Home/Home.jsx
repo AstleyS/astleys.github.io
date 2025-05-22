@@ -48,19 +48,18 @@ const Home = () => {
           <br />
           I am Astley Santos
         </h1>
-        <h2 style={{  background: 'linear-gradient(90deg, var(--primary-color), var(--secondary-color))',  WebkitBackgroundClip: 'text',  WebkitTextFillColor: 'transparent',  fontSize: '2rem',  fontWeight: 'bold',  margin: '0 0 10px 0' }}>
-          Software Engineer
-        </h2>
-        <span>
+        <div style={{ margin: '20px'}}>
           <a style={{ marginRight:'10px' }} href="https://github.com/AstleyS" target="_blank">
             <FontAwesomeIcon style={{fontSize: '1.5rem'}} icon={faGithub} />
           </a>
           <a href="https://linkedin.com/in/astley-santos" target="_blank">
             <FontAwesomeIcon style={{fontSize: '1.5rem'}} icon={faLinkedin} />
           </a>
-        </span>
+        </div>
         <p className='intro'>
-        Turning ideas into reality through technology, constantly learning and growing along the way.
+           <span className='intro-occupation'>Computer Scientist | Software Developer | AI Enthusiast</span>
+           <br />
+           Shaping meaningful and innovative ideas into reality through technology, constantly learning and growing along the way
         </p>
       </div>
     </section>

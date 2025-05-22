@@ -67,6 +67,9 @@ const About = () => {
             tackle complex challenges with a strong interest in Software Development and Artificial Intelligence 
             innovations. With a solid foundation in modern technologies and a passion for problem-solving, I 
             am eager to contribute to impactful and meaningful projects.
+            <br />
+            <br />
+            I’m currently seeking new opportunities where I can grow as a developer, collaborate with forward-thinking teams, and contribute to building intuitive, intelligent, and scalable products.
           </p>
 
           <div className="carousel-container">

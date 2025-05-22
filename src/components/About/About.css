@@ -1,11 +1,24 @@
 /* ====== ABOUT ====== */
-.about-section {
-    height: max-content;
-
-    text-align: justify;
-    word-spacing: 0.125rem;
-    line-height: 2.3rem;
+.about {
+  max-width: 70%;
+  text-align: center;
+  margin: 1rem auto;
+  line-height: 1.8;
+  padding: 0 1rem;
+  font-weight: var(--semi-bold);
 }
+
+.about-section {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 .about-section .title::before {
     content: "";
@@ -40,11 +53,6 @@
     height: 10px;
     background-color: green;
     border-radius: 50%;
-}
-
-.about {
-    font-weight: var(--semi-bold); /* Make it bolder */
-    line-height: 2;
 }
 
 .about .job-positions {
@@ -137,3 +145,5 @@
     border-radius: 10px ; /* Add border radius for rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for more personality */
   }
+
+
