@@ -79,8 +79,8 @@ const projects = [
     technologies: ['AI/ML', 'python'],
     image: mnistSketchRecognition,
     gif: projectGif,
-    website: 'https://astleys.github.io/mnist-scketch-digit-recognition/',
-    github: 'https://github.com/AstleyS/mnist-scketch-digit-recognition',
+    website: 'https://astleys.github.io/mnist-sketch-digit-recognition/',
+    github: 'https://github.com/AstleyS/mnist-sketch-digit-recognition',
     description: 'An interactive web app that lets users draw digits and instantly visualizes the live probabilities of what digit the model predicts, showing confidence levels for each digit from 0–9.',
     available: true
   },
