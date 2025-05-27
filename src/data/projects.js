@@ -6,6 +6,7 @@ import flaskTodoList from '../assets/flask_todolist.png';
 //import vanillaJsPortfolio from '../assets/vanilla_js_portfolio.png';
 import reactPortfolio from '../assets/react_portfolio.png';
 import pathfinderVisualizer from '../assets/pathfinder_visualizer.png';
+import mnistSketchRecognition from '../assets/mnist_sketch_recognition.png';
 // import violinPosture from '../assets/violin_posture.png';
 // import angularTodoList from '../assets/angular_todolist.png';
 // import inventoryManagement from '../assets/inventory_management.png';
@@ -76,12 +77,12 @@ const projects = [
   {
     title: 'MNIST Sketch Recognition',
     technologies: ['AI/ML', 'python'],
-    image: upcomingImg,
+    image: mnistSketchRecognition,
     gif: projectGif,
-    website: '#',
-    github: 'https://github.com/AstleyS/mnist-scketch-recognition',
+    website: 'https://astleys.github.io/mnist-scketch-digit-recognition/',
+    github: 'https://github.com/AstleyS/mnist-scketch-digit-recognition',
     description: 'An interactive web app that lets users draw digits and instantly visualizes the live probabilities of what digit the model predicts, showing confidence levels for each digit from 0–9.',
-    available: false
+    available: true
   },
 
   {

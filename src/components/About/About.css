@@ -8,6 +8,12 @@
   font-weight: var(--semi-bold);
 }
 
+@media (max-width: 1200px) {
+  .about {
+    max-width: none;
+  }
+}
+
 .about-section {
   text-align: center;
   padding: 2rem 1rem;
