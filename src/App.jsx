@@ -10,8 +10,14 @@ import About from './components/About/About'
 import MyPath from './components/MyPath/MyPath'
 import Portfolio from './components/Portfolio/Portfolio'
 import Contact from './components/Contact/Contact'
+import Maintenance from './components/Maintenance/Maintenance'
 
 function App() {
+  const [maintenanceMode, setMaintenanceMode] = useState(true);
+  
+  if (maintenanceMode) {
+    return <Maintenance />
+  }
   
   const components = [<Home />, <About />, <Portfolio />, <Contact />]
 
