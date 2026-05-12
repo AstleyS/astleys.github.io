@@ -2,38 +2,23 @@ import { useState } from 'react'
 import './App.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { motion } from 'framer-motion';
 
-import Header from './components/Header/Header'
-import Home from './components/Home/Home'
-import About from './components/About/About'
-import MyPath from './components/MyPath/MyPath'
-import Portfolio from './components/Portfolio/Portfolio'
-import Contact from './components/Contact/Contact'
 import Maintenance from './components/Maintenance/Maintenance'
+import Nav from './components/Nav/Nav';
 
 function App() {
-  const [maintenanceMode, setMaintenanceMode] = useState(true);
   
+  const [maintenanceMode, setMaintenanceMode] = useState(false);
+  const VIEWS = ['HOME', 'ABOUT', 'PROJECTS', 'CONTACT']
+
   if (maintenanceMode) {
     return <Maintenance />
   }
-  
-  const components = [<Home />, <About />, <Portfolio />, <Contact />]
+  const components = [<Nav active={'HOME'} views={VIEWS} />]
 
   return (
     <>
-    <Header />, 
-      {components.map((component, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          {component}
-        </motion.div>
-      ))}
+      <Nav active={'HOME'} views={VIEWS} />
       <footer className="footer">
         <p>&copy; {new Date().getFullYear()} Astley Santos. All rights reserved.</p>
       </footer>
