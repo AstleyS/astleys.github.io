@@ -10,7 +10,7 @@ const Nav = ({active, views}) => {
   return (
     <nav className='nav'>
       <div className='nav-logo'>
-        DEV
+        Astley Santos
       </div>
 
       <div className='nav-links'>
