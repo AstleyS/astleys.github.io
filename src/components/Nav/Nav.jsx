@@ -5,7 +5,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import './Nav.css';
 
 
-const Nav = ({active, views}) => {
+const Nav = ({active, views, setActiveView}) => {
 
   return (
     <nav className='nav'>
@@ -20,6 +20,7 @@ const Nav = ({active, views}) => {
             <button
              key={index}
              className={`nav-link ${active === view ? 'active' : ''}`}
+             onClick={() => setActiveView(view)}
             >
               {view}
             </button>
