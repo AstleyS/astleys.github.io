@@ -1,0 +1,49 @@
+{
+    "name": "Astley Santos",
+    "title": "Software Engineer",
+    "tagline": "Software engineer passionate about building things that matter",
+    "availableForWork": true,
+    "github": "https://github.com/AstleyS",
+    "linkedin": "https://www.linkedin.com/in/astley-santos/",
+    "about": "Software Engineer with a Master’s in Computer Science specialised in Artificial Intelligence. Experienced in building end-to-end systems spanning from backend, frontend, and machine learning pipelines, with a strong focus on scalable architecture and research-driven problem solving. Proven ability to design and implement complex software systems and apply Machine Learning techniques to real-world engineering and scientific problems. Seeking to contribute to impactful products at the intersections of software engineering and/or AI",
+    "skill": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "SQL",
+        "React",
+        "Angular",
+        "Spring Boot",
+        "Node.js",
+        "REST APIs",
+        "PyTorch",
+        "Scikit-learn",
+        "Pandas",
+        "NumPy",
+        "Machine Learning",
+        "Deep Learning",
+        "Docker",
+        "CI/CD"
+    ],
+    "experience": [
+        {
+            "company": "Yuri GmbH",
+            "position": "Software Engineer Intern",
+            "duration": "07/2025 - 12/2025",
+            "description": "Built the foundational architecture and MVP of Yuri’s Mission Control System using Java/JavaFX, for planning, monitoring and managing space-based biotechnology experiments"
+        },
+        {
+            "company": "University of Luxembourg",
+            "position": "Teaching Assistant",
+            "duration": "2023 - 2024",
+            "description": "Designed and automated testing workflows for grading programming assignments in a Web Development course"
+        },
+        {
+            "company": "Luxembourg Centre for Systems Biomedicine",
+            "position": "Software Developer",
+            "duration": "2022",
+            "description": "Contributed to feasibility analysis and early-stage development of a mobile health application for Parkinson’s monitoring and biomedical research"
+        }
+    ]
+}

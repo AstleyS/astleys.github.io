@@ -3,8 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-import me from '../../assets/me.jpg';
-
+import cv from '../../data/cv.json'
 import './Home.css';
 
 const Home = () => {
@@ -23,7 +22,7 @@ const Home = () => {
     <p> Available for work · 2026</p>
     <div className='presentation'>
       <h1>
-        Software & ML Engineer
+        {cv.title}
       </h1>
       <div style={{ margin: '20px'}}>
         <a style={{ marginRight:'10px' }} href="https://github.com/AstleyS" target="_blank">
@@ -34,7 +33,7 @@ const Home = () => {
         </a>
       </div>
       <p className='intro'>
-        Software engineer passionate about building things that matter.
+        {cv.tagline}
       </p>
     </div>
     </>
