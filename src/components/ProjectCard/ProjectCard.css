@@ -1,0 +1,196 @@
+.project-card {
+  position: relative;
+  width: min(360px, 72vw);
+  max-width: 380px;
+
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  transition:
+    width 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.4s,
+    border-color 0.3s;
+}
+
+/* EXPANDED */
+.project-card.expanded {
+  width: min(680px, 88vw);
+  border-color: var(--accent);
+  transform: scale(1.01);
+  z-index: 10;
+  cursor: default;
+}
+
+/* SHRUNK (other cards fade away) */
+.project-card.shrunk {
+  opacity: 0;
+  transform: scale(0.82) translateX(-40px);
+  pointer-events: none;
+}
+
+/* HOVER EFFECT */
+.project-card:hover:not(.expanded):not(.shrunk) {
+  transform: translateY(-5px) scale(1.015);
+}
+
+/* CLOSE BUTTON */
+.project-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--text);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  z-index: 20;
+}
+
+.project-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* THUMB */
+.project-thumb {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+
+  transition:
+    height 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card.expanded .project-thumb {
+  height: 240px;
+}
+
+.project-thumb-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.project-thumb-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 60px;
+  background: linear-gradient(
+    transparent,
+    var(--surface)
+  );
+}
+
+/* BODY */
+.project-body {
+  padding: 1.2rem 1.3rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+
+  flex: 1;
+  min-height: 170px;
+}
+
+/* META */
+.project-meta {
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* TITLE */
+.project-title {
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: 1.3rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* DESCRIPTION */
+.project-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+/* LINKS */
+.project-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.4rem;
+}
+
+.project-link {
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+
+  border: 1px solid var(--border);
+  color: var(--muted);
+
+  font-size: 0.75rem;
+  text-decoration: none;
+
+  transition: all 0.2s;
+}
+
+.project-link:hover {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.project-link.primary {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+}
+
+/* TAGS */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+
+  margin-top: auto;
+  padding-top: 0.6rem;
+}
+
+.tag {
+  font-size: 0.62rem;
+  padding: 0.2rem 0.55rem;
+
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--muted);
+}

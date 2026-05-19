@@ -7,6 +7,7 @@ import Maintenance from './components/Maintenance/Maintenance'
 import Nav from './components/Nav/Nav';
 import Home from './components/Home/Home';
 import About from './components/About/About';
+import Projects from './components/Projects/Projects';
 
 function App() {
   
@@ -26,6 +27,9 @@ function App() {
       {activeView === 'HOME' && <Home />}
       {/* If active view is ABOUT */}
       {activeView === 'ABOUT' && <About />}
+      {/* If active view is PROJECTS */}
+      {activeView === 'PROJECTS' && <Projects />}
+
 
       <footer className="footer">
         <p>&copy; {new Date().getFullYear()} Astley Santos. All rights reserved.</p>

@@ -1,58 +1,80 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import React, { useState, useEffect } from "react";
+import "./Projects.css";
+import ProjectCard from "../ProjectCard/ProjectCard";
+import projects from "../../data/projects.json";
+import { CAT_COLORS } from "../../constants/colors";
 
-import './Project.css'
+const getCategories = (projects) => {
+  const set = new Set();
+  projects.forEach((p) => set.add(p.category));
+  return ["All", ...set];
+};
 
-const Project = ({ project, hoveredProject, selectedProject, onSelect }) => {
-  // Show description if either hovered or selected
-  const showDescription = hoveredProject === project.id || selectedProject === project.id;
-  
+const Projects = () => {
+  const [cat, setCat] = useState("All");
+  const [expanded, setExpanded] = useState(null);
+
+  const categories = getCategories(projects);
+
+  const filtered =
+    cat === "All"
+      ? projects
+      : projects.filter((p) => p.category === cat);
+
+  const handleExpand = (id) =>
+    setExpanded((prev) => (prev === id ? null : id));
+
+  const handleClose = () => setExpanded(null);
+
+  useEffect(() => {
+    setExpanded(null);
+  }, [cat]);
+
   return (
-    <>
-      <div 
-        className="project-image-container"
-        onClick={() => onSelect(selectedProject === project.id ? null : project.id)}
-        onMouseEnter={() => project.available && onSelect(project.id, true)}
-        onMouseLeave={() => project.available && !selectedProject && onSelect(null, true)}
-      >
-        <img
-          src={project.image}
-          alt={project.title}
-        />
-      </div>
-      <h3 className="project-title">{project.title}</h3>
-      <div className="project-links">
-            {project.website && (
-            <a 
-              href={project.website} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
+    <section className="projects-section">
+      {/* HEADER */}
+      <div className="projects-header">
+        <h2>Projects</h2>
+
+        <div className="tabs">
+          {categories.map((c) => (
+            <button
+              key={c}
+              className={`tab ${
+                cat === c ? "active" : ""
+              }`}
+              onClick={() => setCat(c)}
             >
-              <FontAwesomeIcon icon={faGlobe} />
-            </a>
-            )}
-            {project.github && (
-              <a 
-                href={project.github} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-            )}
+              {c}
+            </button>
+          ))}
+        </div>
       </div>
 
-      {showDescription && (
-        <div className="project-description">
-          <p>{project.description}</p>
-        </div>
-      )}
-    </>
+      {/* TRACK */}
+      <div className="projects-track">
+        {filtered.map((p) => (
+          <ProjectCard
+            key={p.id}
+            project={p}
+            colors={CAT_COLORS}
+            isExpanded={expanded === p.id}
+            isShrunk={
+              expanded !== null &&
+              expanded !== p.id
+            }
+            onClick={() => handleExpand(p.id)}
+            onClose={handleClose}
+          />
+        ))}
+      </div>
+
+      {/* HINT */}
+      <p className="projects-hint">
+        Click a card to expand
+      </p>
+    </section>
   );
 };
 
-export default Project;
+export default Projects;
