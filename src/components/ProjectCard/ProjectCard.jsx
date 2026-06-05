@@ -5,6 +5,11 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import './ProjectCard.css';
 
+const imageModules = import.meta.glob('../../assets/*.{png,jpg,jpeg,gif}', {
+  eager: true,
+  as: 'url',
+});
+
 const ProjectCard = ({
   project,
   isExpanded,
@@ -14,9 +19,9 @@ const ProjectCard = ({
   colors,
 }) => {
   const col = colors?.[project.category] || colors?.Web;
-  const projectImage = typeof project.image === 'string'
-    ? new URL(project.image, import.meta.url).href
-    : project.image;
+  const projectImage = project.image
+    ? imageModules[`../../assets/${project.image}`] || project.image
+    : undefined;
   const descriptionText = isExpanded
     ? project.detail ?? project.description
     : project.description;

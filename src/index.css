@@ -6,8 +6,8 @@
   font-weight: 400;
 
   color-scheme: dark;
-  color: #f5f5ff;
-  background-color: #060608;
+  color: #f2f2ff;
+  background-color: #191a2f;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,16 +15,16 @@
   -moz-osx-font-smoothing: grayscale;
 
   /* ====== COLORS ====== */
-  --bg: #060608;
-  --surface: #0f0e18;
-  --surface-alt: #131225;
-  --border: rgba(255, 255, 255, 0.08);
-  --text: #f3f2ff;
-  --muted: #aaa8ff;
-  --accent: #8b6bff;
-  --accent-strong: #d0b8ff;
-  --highlight: #a682ff;
-  --shadow: rgba(0, 0, 0, 0.35);
+  --bg: #191a2f;
+  --surface: rgba(24, 27, 52, 0.95);
+  --surface-alt: rgba(28, 31, 57, 0.95);
+  --border: rgba(255, 255, 255, 0.16);
+  --text: #f6f5ff;
+  --muted: #c1bcff;
+  --accent: #9b7cff;
+  --accent-strong: #d9c0ff;
+  --highlight: #b49cff;
+  --shadow: rgba(0, 0, 0, 0.28);
 
   --primary-color: var(--accent);
   --secondary-color: #9f7dff;
@@ -69,8 +69,26 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow: hidden;
-  background: var(--bg);
-  color: #ffffff;
+  background: 
+    radial-gradient(
+      ellipse at 15% 30%,
+      rgba(255, 255, 255, 0.08) 0%,
+      transparent 24%
+    ),
+    radial-gradient(
+      ellipse at 85% 20%,
+      rgba(155, 124, 255, 0.14) 0%,
+      transparent 38%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(25, 27, 55, 0.92) 0%,
+      rgba(15, 16, 40, 0.95) 60%,
+      rgba(20, 22, 48, 0.98) 100%
+    ),
+    #191a2f;
+  background-attachment: fixed;
+  color: #f6f5ff;
   font-family: var(--body-font);
 }
 

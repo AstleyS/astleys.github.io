@@ -1,7 +1,7 @@
 .project-card {
   position: relative;
-  width: min(360px, 72vw);
-  max-width: 380px;
+  width: min(380px, 72vw);
+  max-width: 420px;
 
   border-radius: 20px;
   border: 1px solid var(--border);
@@ -70,7 +70,7 @@
 
 /* THUMB */
 .project-thumb {
-  height: 200px;
+  height: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,7 +84,7 @@
 }
 
 .project-card.expanded .project-thumb {
-  height: 240px;
+  height: 280px;
 }
 
 .project-thumb-image {
@@ -122,26 +122,26 @@
 
 /* META */
 .project-meta {
-  font-size: 0.62rem;
-  letter-spacing: 0.15em;
+  font-size: 0.95rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* TITLE */
 .project-title {
   font-family: "Syne", sans-serif;
   font-weight: 800;
-  font-size: 1.3rem;
-  line-height: 1.1;
+  font-size: 2rem;
+  line-height: 1.05;
   letter-spacing: -0.02em;
 }
 
 /* DESCRIPTION */
 .project-desc {
-  font-size: 0.85rem;
+  font-size: 1.12rem;
   color: var(--text);
-  line-height: 1.65;
+  line-height: 1.85;
   font-weight: 300;
 }
 
@@ -153,13 +153,13 @@
 }
 
 .project-link {
-  padding: 0.45rem 1.1rem;
+  padding: 0.7rem 1.3rem;
   border-radius: 999px;
 
   border: 1px solid var(--border);
   color: var(--muted);
 
-  font-size: 0.75rem;
+  font-size: 0.96rem;
   text-decoration: none;
 
   transition: all 0.2s;

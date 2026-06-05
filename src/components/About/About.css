@@ -15,7 +15,8 @@
   flex-direction: column;
   gap: 1.2rem;
 
-  max-width: 520px;
+  max-width: 700px;
+  flex: 1;
 }
 
 .about-label {
@@ -28,16 +29,16 @@
 
 .about-name {
   font-family: "Syne", sans-serif;
-  font-size: 2.8rem;
+  font-size: 3.8rem;
   font-weight: 800;
 
-  line-height: 1;
+  line-height: 1.05;
   letter-spacing: -0.02em;
 }
 
 .about-bio {
-  font-size: 0.9rem;
-  line-height: 1.8;
+  font-size: 1.08rem;
+  line-height: 1.95;
   font-weight: 300;
 
   color: var(--text);
@@ -51,13 +52,13 @@
 }
 
 .skill-pill {
-  padding: 0.38rem 0.95rem;
+  padding: 0.45rem 1rem;
 
   border-radius: 999px;
   border: 1.5px solid rgba(139, 107, 255, 0.55);
   background: rgba(139, 107, 255, 0.08);
 
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   letter-spacing: 0.08em;
 
   color: var(--text);
@@ -89,20 +90,20 @@
 }
 
 .experience-period {
-  min-width: 80px;
+  min-width: 90px;
 
   padding-top: 0.15rem;
 
-  font-size: 0.65rem;
-  font-weight: 500;
+  font-size: 0.78rem;
+  font-weight: 600;
   letter-spacing: 0.04em;
 
   color: var(--accent);
 }
 
 .experience-role {
-  font-size: 0.82rem;
-  font-weight: 500;
+  font-size: 1.05rem;
+  font-weight: 600;
 
   color: var(--text);
 
@@ -110,8 +111,8 @@
 }
 
 .experience-desc {
-  font-size: 0.78rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.7;
   font-weight: 300;
 
   color: var(--text);
@@ -128,8 +129,8 @@
 
 .cv-container p {
   color: var(--text);
-  font-size: 0.85rem;
-  line-height: 1.6;
+  font-size: 0.95rem;
+  line-height: 1.75;
 
   margin-bottom: 1rem;
 }

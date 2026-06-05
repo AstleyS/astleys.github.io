@@ -7,8 +7,8 @@
     "technologies": [
       "react"
     ],
-    "image": "../../assets/pathfinder_visualizer.png",
-    "gif": "../../assets/project_gif.gif",
+    "image": "pathfinder_visualizer.png",
+    "gif": "project_gif.gif",
     "website": "https://astleys.github.io/web-pathfinder-visualizer",
     "github": "https://github.com/AstleyS/web-pathfinder-visualizer",
     "available": true
@@ -22,8 +22,8 @@
       "AI/ML",
       "python"
     ],
-    "image": "../../assets/mnist_sketch_recognition.png",
-    "gif": "../../assets/project_gif.gif",
+    "image": "mnist_sketch_recognition.png",
+    "gif": "project_gif.gif",
     "website": "https://astleys.github.io/mnist-sketch-digit-recognition/",
     "github": "https://github.com/AstleyS/mnist-sketch-digit-recognition",
     "available": true
