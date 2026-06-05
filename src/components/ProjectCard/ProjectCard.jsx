@@ -69,6 +69,18 @@ const ProjectCard = ({
         {/* links */}
         {isExpanded && (
           <div className="project-links">
+            {project.website && (
+              <a
+                href={project.website}
+                target="_blank"
+                rel="noreferrer"
+                className="project-link primary"
+              >
+                <FontAwesomeIcon icon={faGlobe} style={{ marginRight: '0.4rem' }} />
+                Website
+              </a>
+            )}
+
             {project.github && (
               <a
                 href={project.github}
@@ -76,18 +88,8 @@ const ProjectCard = ({
                 rel="noreferrer"
                 className="project-link"
               >
-                ↗ GitHub
-              </a>
-            )}
-
-            {project.demo && (
-              <a
-                href={project.demo}
-                target="_blank"
-                rel="noreferrer"
-                className="project-link primary"
-              >
-                ↗ Live demo
+                <FontAwesomeIcon icon={faGithub} style={{ marginRight: '0.4rem' }} />
+                GitHub
               </a>
             )}
           </div>

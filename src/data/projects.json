@@ -1,33 +1,5 @@
 [
   {
-    "id": "portfolio-js",
-    "title": "Vanilla JS Portfolio Website",
-    "description": "This is Astley's personal web portfolio, designed and developed using only HTML, CSS, and JavaScript to showcase projects, skills, and achievements.",
-    "category": "Web",
-    "technologies": [
-      "vanilla JS"
-    ],
-    "image": "../../assets/project_img.png",
-    "gif": "../../assets/project_gif.gif",
-    "website": "",
-    "github": "https://github.com/AstleyS/astleys.github.io/tree/vanillaJS",
-    "available": true
-  },
-  {
-    "id": "portfolio-react",
-    "title": "React Portfolio Website",
-    "description": "Astley's personal portfolio website, redesigned using React.js for improved modularity, performance, and user experience.",
-    "category": "Web",
-    "technologies": [
-      "react"
-    ],
-    "image": "../../assets/react_portfolio.png",
-    "gif": "../../assets/project_gif.gif",
-    "website": "",
-    "github": "https://github.com/AstleyS/astleys.github.io",
-    "available": true
-  },
-  {
     "id": "pathfinder-visualizer",
     "title": "Pathfinder Algorithm Visualizer",
     "description": "A React-based visualization tool that demonstrates pathfinding algorithms like A* and Dijkstra, helping users understand how different algorithms navigate through a grid.",
@@ -55,35 +27,5 @@
     "website": "https://astleys.github.io/mnist-sketch-digit-recognition/",
     "github": "https://github.com/AstleyS/mnist-sketch-digit-recognition",
     "available": true
-  },
-  {
-    "id": "university-management-system",
-    "title": "University Management System",
-    "description": "The University Management System is a full-stack web application designed to streamline and digitize the academic workflows of an educational institution.",
-    "category": "Web",
-    "technologies": [
-      "spring boot",
-      "angular"
-    ],
-    "image": "../../assets/upcoming_project.png",
-    "gif": "../../assets/project_gif.gif",
-    "github": "https://github.com/AstleyS/school-system-frontend",
-    "website": "",
-    "available": false
-  },
-  {
-    "id": "gym-workout-classification",
-    "title": "Gym Workout Classification",
-    "description": "An AI/ML project to classify different gym workouts.",
-    "category": "AI/ML",
-    "technologies": [
-      "AI/ML",
-      "python"
-    ],
-    "image": "../../assets/upcoming_project.png",
-    "gif": "../../assets/project_gif.gif",
-    "website": "",
-    "github": "https://github.com/AstleyS/gym-workout-classification",
-    "available": false
   }
 ]
