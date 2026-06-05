@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 import Maintenance from './components/Maintenance/Maintenance'
+import MouseFollower from './components/MouseFollower/MouseFollower';
 import Nav from './components/Nav/Nav';
 import Home from './components/Home/Home';
 import About from './components/About/About';
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <div className="app-shell">
+      <MouseFollower />
       <Nav active={activeView} views={VIEWS} setActiveView={setActiveView} />
 
       <main className="view-shell">
