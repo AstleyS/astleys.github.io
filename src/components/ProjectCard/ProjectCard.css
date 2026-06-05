@@ -140,7 +140,7 @@
 /* DESCRIPTION */
 .project-desc {
   font-size: 0.85rem;
-  color: var(--muted);
+  color: var(--text);
   line-height: 1.65;
   font-weight: 300;
 }

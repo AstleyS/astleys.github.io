@@ -6,37 +6,36 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import cv from '../../data/cv.json'
 import './Home.css';
 
-const Home = () => {
+const Home = ({ setActiveView }) => {
   return (
-    <>
-    <div className="home-container">
-      { /*
-      }
-      <img
-        src={me}
-        className="me-img"
-        alt="Profile picture of Astley Santos"
-      />
-      */ }
-    </div>
-    <p> Available for work · 2026</p>
-    <div className='presentation'>
-      <h1>
-        {cv.title}
-      </h1>
-      <div style={{ margin: '20px'}}>
-        <a style={{ marginRight:'10px' }} href="https://github.com/AstleyS" target="_blank">
-          <FontAwesomeIcon style={{fontSize: '1.5rem'}} icon={faGithub} />
-        </a>
-        <a href="https://linkedin.com/in/astley-santos" target="_blank">
-          <FontAwesomeIcon style={{fontSize: '1.5rem'}} icon={faLinkedin} />
-        </a>
+    <section className="home-section">
+      <div className='presentation'>
+        <div className="home-topline">
+          Available for work
+        </div>
+
+        <h1>{cv.title}</h1>
+
+        <div className="social-links">
+          <a href="https://github.com/AstleyS" target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+          <a href="https://linkedin.com/in/astley-santos" target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+        </div>
+
+        <p className='intro'>{cv.tagline}</p>
+
+        <button
+          type="button"
+          className="home-action"
+          onClick={() => setActiveView('PROJECTS')}
+        >
+          See my work
+        </button>
       </div>
-      <p className='intro'>
-        {cv.tagline}
-      </p>
-    </div>
-    </>
+    </section>
   );
 
   
